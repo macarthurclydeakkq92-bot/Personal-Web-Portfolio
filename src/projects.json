@@ -1,0 +1,310 @@
+[
+  {
+    "slug": "conduit",
+    "title": "Conduit",
+    "category": "Real-time VFX",
+    "status": "Selected",
+    "visible": true,
+    "cover": "/assets/conduit-01.webp",
+    "coverCaption": "Team gameplay. My contributions are described below.",
+    "summary": "Combat effects and environmental assets for a hostile, unfamiliar world.",
+    "role": "Attack & hit VFX · Environment props Localization · Playtest coordination",
+    "tools": "Unity · Maya · Substance Painter",
+    "period": "Jan–Apr 2026",
+    "context": "RPI · Team project",
+    "link": "https://store.steampowered.com/app/4558030/Conduit/",
+    "sections": [
+      {
+        "id": "conduit-0",
+        "title": "Fight through an alien landscape.",
+        "body": "Conduit is a student-made 3D action-adventure game developed over a four-month semester. Players explore an alien tundra, investigate ruins, and fight mechanical and organic enemies.\n\nI worked on the project’s art team, contributing combat effects and environmental props while also supporting the Simplified Chinese version and playtesting in Mainland China."
+      },
+      {
+        "id": "conduit-1",
+        "title": "Effects, assets, and implementation.",
+        "body": "Character attack effects I created visual effects for character attacks, contributing to the moment-to-moment presentation of combat.\n\nHit effects I made effects associated with characters being hit. My work covered both the action and its immediate visual response.\n\nEnvironmental props I modeled 3D objects for the game’s environments as part of the team’s shared asset production.\n\nConduit brought my effects work and 3D modeling into one playable team project. It also gave me a reason to think about the relationship between individual assets and the wider game experience."
+      },
+      {
+        "id": "conduit-2",
+        "title": "Making the game accessible to players.",
+        "body": "Simplified Chinese localization\n\nI translated game text from English into Simplified Chinese. The Steam page lists Simplified Chinese interface support in the released game.\n\nPlaytesting and outreach\n\nI helped organize playtests and promotional activities for players in Mainland China, extending my contribution beyond asset production."
+      },
+      {
+        "id": "conduit-3",
+        "title": "Animated Anomalies.",
+        "body": "Conduit was created as an RPI Games and Simulation Arts and Sciences capstone project. My role was part of the art team, alongside contributors working across design, programming, art, and audio.\n\nGame overview, release information, and public media:  official Steam page ."
+      }
+    ],
+    "media": [],
+    "zh": {
+      "category": "实时特效",
+      "summary": "为陌生而充满敌意的世界，制作战斗特效与环境资产。",
+      "role": "攻击与受击特效 · 场景道具 · 中文本地化 · 测试协调",
+      "period": "2026 年 1–4 月",
+      "context": "RPI · 团队项目",
+      "coverCaption": "团队游戏画面，个人贡献详见下方说明。",
+      "sections": [
+        {
+          "title": "穿行于异星景观",
+          "body": "Conduit 是在四个月学期内完成的学生团队 3D 动作冒险游戏。玩家探索异星冻原、调查遗迹，并与机械和有机敌人战斗。\n\n我参与美术团队，负责战斗特效与环境道具，同时支持简体中文版本和中国大陆玩家测试。"
+        },
+        {
+          "title": "特效、资产与实现",
+          "body": "制作角色攻击与受击特效，让动作与即时反馈相互衔接；建模环境中的 3D 道具，参与团队共享资产制作。\n\n这个项目将特效与建模工作放入同一个可玩的系统，也让我思考单个资产如何服务于整体体验。"
+        },
+        {
+          "title": "让更多玩家进入游戏",
+          "body": "将游戏文本从英语翻译为简体中文，Steam 页面列有简体中文界面支持。\n\n协助组织中国大陆玩家测试和推广，将贡献延伸至资产制作之外。"
+        },
+        {
+          "title": "团队协作",
+          "body": "项目属于 RPI Games and Simulation Arts and Sciences 毕业设计，由设计、程序、美术与音频成员共同完成。完整信息与公开素材请查看 Steam 页面。"
+        }
+      ],
+      "media": []
+    }
+  },
+  {
+    "slug": "wands-and-tomes",
+    "title": "Wands and Tomes",
+    "category": "Game design",
+    "status": "Selected",
+    "visible": true,
+    "cover": "/assets/wands-hero.webp",
+    "coverCaption": "Team gameplay. My contributions are described below.",
+    "summary": "One card. Two possibilities. Connecting card mechanics, playtesting, and 3D art.",
+    "role": "Card mechanics · Selected 3D assets Simplified Chinese localization",
+    "tools": "Maya · ZBrush · Substance Painter",
+    "period": "Jan–Apr 2025 / Jan–Apr 2026",
+    "context": "RPI · Team project",
+    "link": "https://mustachioed-toad.itch.io/wands-and-tomes",
+    "sections": [
+      {
+        "id": "wands-and-tomes-0",
+        "title": "A spell, or a place on the board?",
+        "body": "Wands and Tomes is a deckbuilding roguelike built around two uses for a card. A player can place its pattern on the board to form boxes and gain mana, or spend mana to cast its spell against an opponent.\n\nThe interesting design problem is the relationship between those two sides. A spell’s apparent cost can change dramatically when its pattern makes mana easy to recover."
+      },
+      {
+        "id": "wands-and-tomes-1",
+        "title": "Design and art in the same system.",
+        "body": "Card mechanics I contributed card functions and took part in discussions about mechanics, balance, and progression. Watching players use the cards became an important part of how I evaluated those decisions.\n\n3D arena assets I produced selected 3D assets for the card battle arena as part of the art team.\n\nLocalization I worked on Simplified Chinese translation. This describes my contribution; it does not imply that every public build contains that localization."
+      },
+      {
+        "id": "wands-and-tomes-2",
+        "title": "When Boomerang kept coming back.",
+        "body": "The intended behavior\n\nBoomerang was designed to be played repeatedly, as long as the player could pay its mana cost. That cost was meant to limit how much the player could do in a turn.\n\nWhat players revealed\n\nDuring playtests, I observed that its flexible board pattern made it unusually easy to recover the mana needed to play it again. The relationship between pattern and spell allowed repeated attacks far beyond what we had expected.\n\nWhat changed in my approach\n\nI began treating board placement and spell power as one design problem. A card’s damage and listed cost could not tell us enough on their own; we had to observe the sequences players could actually construct."
+      },
+      {
+        "id": "wands-and-tomes-3",
+        "title": "A shared production.",
+        "body": "The public project credits list me as an artist alongside Eugene Oh, Tyler Lin, Junhao Teng, and Nickolas Ho. The game is directed by Kevin Hacene, with programming, sound, music, and narrative contributions from the wider team.\n\nFull team and third-party asset credits:  Wands and Tomes on itch.io ."
+      }
+    ],
+    "media": [
+      {
+        "id": "cards",
+        "url": "/assets/wands-cards.webp",
+        "type": "image",
+        "caption": "Card reward screen from the public team build; not a before/after balance comparison.",
+        "group": "process"
+      }
+    ],
+    "zh": {
+      "category": "游戏设计 / 场景美术",
+      "summary": "一张卡牌，两种可能：连接卡牌机制、玩家测试与 3D 美术。",
+      "role": "卡牌机制 · 部分 3D 资产 · 简体中文本地化",
+      "period": "2025 / 2026 年 1–4 月",
+      "context": "RPI · 团队项目",
+      "coverCaption": "团队游戏画面，个人贡献详见下方说明。",
+      "sections": [
+        {
+          "title": "施放法术，还是放入棋盘？",
+          "body": "Wands and Tomes 是围绕卡牌双重用途展开的牌组构筑 roguelike。玩家可将卡牌图案放入棋盘，围成方框获取法力，或消耗法力对对手施放法术。\n\n当图案使法力易于回收时，法术的实际成本也会发生变化。两者的关系是关键设计问题。"
+        },
+        {
+          "title": "同一系统里的设计与美术",
+          "body": "参与卡牌功能、机制、平衡和成长曲线讨论；通过观察玩家使用卡牌评估设计。作为美术团队成员制作部分卡牌竞技场 3D 资产，并参与简体中文翻译。\n\n本地化描述的是个人贡献，不表示每个公开版本均已包含译文。"
+        },
+        {
+          "title": "当 Boomerang 一次次回到手中",
+          "body": "设计意图：只要玩家能支付法力，就能重复打出 Boomerang，成本本应限制每回合的行动。\n\n测试发现：灵活的棋盘图案让玩家轻易回收法力，导致远超预期的连续攻击。\n\n反思：棋盘放置与法术强度必须共同考虑，仅看伤害与标示成本不足以判断平衡，需要观察玩家实际构建的操作序列。"
+        },
+        {
+          "title": "共同完成的作品",
+          "body": "公开名单将我列为美术成员，项目由 Kevin Hacene 指导，完整团队及第三方资产名单见 itch.io 页面。"
+        }
+      ],
+      "media": [
+        {
+          "id": "cards",
+          "url": "/assets/wands-cards.webp",
+          "type": "image",
+          "caption": "团队公开版本的卡牌奖励界面，非平衡调整前后对比。",
+          "group": "process"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "two-sisters",
+    "title": "Two Sisters",
+    "category": "Game art",
+    "status": "Additional work",
+    "visible": true,
+    "cover": "/assets/sisters.webp",
+    "coverCaption": "Team-game image. My individual contributions are described below.",
+    "summary": "A collaborative game project with an art-team contribution.",
+    "role": "VFX artist · Game designer",
+    "tools": "Unity",
+    "period": "Nov–Dec 2025",
+    "context": "Team project",
+    "link": "https://sec9.itch.io/two-sisters",
+    "sections": [
+      {
+        "id": "two-sisters0",
+        "title": "My contribution",
+        "body": "I contributed as an artist. The linked project contains full team credits; the image here represents the team game. Individual asset documentation will distinguish my work from the wider production.\n\nThe supplied résumé additionally documents attack VFX, movement trails, elemental impacts, 70+ playtesters and five major build iterations."
+      }
+    ],
+    "media": [],
+    "zh": {
+      "category": "游戏美术",
+      "summary": "团队动作 RPG 中的特效与视觉制作。",
+      "role": "特效美术 · 游戏设计",
+      "period": "2025 年 11–12 月",
+      "context": "团队项目",
+      "tools": "Unity",
+      "coverCaption": "团队游戏画面，个人资产拆解待补充。",
+      "sections": [
+        {
+          "title": "个人贡献",
+          "body": "整合包将我列为 Artist；简历补充了 Unity 攻击特效、运动拖尾与元素技能反馈的制作，以及玩法与视觉方向设计。\n\n组织 70+ 玩家测试并完成五次主要迭代。完整团队名单见项目链接；单独资产拆解将后续补充。"
+        }
+      ],
+      "media": []
+    }
+  },
+  {
+    "slug": "karkinos-ascension",
+    "title": "Karkinos’ Ascension",
+    "category": "Game art",
+    "status": "Additional work",
+    "visible": true,
+    "cover": "/assets/karkinos.webp",
+    "coverCaption": "Team-game image. My individual contributions are described below.",
+    "summary": "An underwater adventure about a player cursed into a crab, collecting magical objects to lift the curse.",
+    "role": "Art team · Environment and interaction effects",
+    "tools": "Unreal Engine · Niagara · Maya · Substance Painter",
+    "period": "",
+    "context": "Team project",
+    "link": "https://swimtime1227.itch.io/karkinos-ascension",
+    "sections": [
+      {
+        "id": "karkinos-ascension0",
+        "title": "Underwater exploration",
+        "body": "My work included coral environment models and materials, alongside effects for interactions with magical items and buildings. The project links to the team’s playable version and credits."
+      },
+      {
+        "id": "karkinos-ascension1",
+        "title": "Showing my work",
+        "body": "Isolated coral assets, material views, and Niagara captures will be added to document the specific pieces I made. The current cover is a team-game image."
+      }
+    ],
+    "media": [],
+    "zh": {
+      "category": "游戏美术 / 交互特效",
+      "summary": "在海底冒险中收集魔法物品，解除变为螃蟹的诅咒。",
+      "role": "美术团队 · 场景与交互特效",
+      "context": "团队项目",
+      "coverCaption": "团队游戏画面，个人贡献详见下方说明。",
+      "sections": [
+        {
+          "title": "海底探索",
+          "body": "制作珊瑚场景模型与材质，以及魔法物品和建筑交互的视觉效果。团队可玩版本与名单见项目链接。"
+        },
+        {
+          "title": "个人作品拆解",
+          "body": "后续将补充独立珊瑚资产、材质视图和 Niagara 录制，明确展示个人完成的内容。当前封面为团队游戏图片。"
+        }
+      ],
+      "media": []
+    }
+  },
+  {
+    "slug": "afterlight",
+    "title": "Afterlight / 余光",
+    "category": "Interactive media",
+    "status": "In development",
+    "visible": true,
+    "cover": "",
+    "coverCaption": "",
+    "summary": "An interaction with projected light leads into a small cinema, where the player can sit and watch a film.",
+    "role": "Solo prototype · Interaction · Scene integration",
+    "tools": "Unity 2022.3",
+    "period": "2026",
+    "context": "Personal project",
+    "link": "",
+    "sections": [
+      {
+        "id": "afterlight0",
+        "title": "Light as an invitation",
+        "body": "The player begins from the projector viewpoint and aims light at an object. After the object has been illuminated long enough, control returns to a freely moving viewpoint. The player can then choose to sit and watch a film."
+      },
+      {
+        "id": "afterlight1",
+        "title": "Current prototype",
+        "body": "The Unity prototype includes object illumination, the transition to free movement, a seated viewpoint, and video playback. These describe the current working direction; final visuals and playtest evidence are still to be documented."
+      },
+      {
+        "id": "afterlight2",
+        "title": "Next documentation",
+        "body": "A short interaction recording, a final composition, a comparison of guidance and pacing, and a reflection will be added here. Production is currently paused."
+      }
+    ],
+    "media": [
+      {
+        "id": "concept",
+        "url": "/assets/afterlight-concept.webp",
+        "caption": "Historical AI concept image — not gameplay or the current Unity prototype."
+      },
+      {
+        "id": "progress",
+        "url": "/assets/afterlight-progress.webp",
+        "caption": "Historical UE5 BP_MemoryTarget screenshot — not the current Unity implementation."
+      }
+    ],
+    "zh": {
+      "category": "交互媒体",
+      "summary": "以投射光线开启一段交互，走入小型影院，坐下观看影片。",
+      "role": "个人原型 · 交互 · 场景整合",
+      "period": "2026",
+      "context": "个人项目",
+      "sections": [
+        {
+          "title": "以光作为邀请",
+          "body": "玩家从投影仪视角出发，用光照射物体。持续照射达到一定时间后，切换回自由移动视角，再选择坐下观看影片。"
+        },
+        {
+          "title": "当前原型",
+          "body": "Unity 原型包含物体照射、自由移动切换、坐姿视角与视频播放。这些描述的是当前工作方向，最终画面与测试证据仍待整理。"
+        },
+        {
+          "title": "下一步记录",
+          "body": "后续补充交互录屏、最终构图、引导与节奏比较及反思。目前制作暂停。"
+        }
+      ],
+      "media": [
+        {
+          "id": "concept",
+          "url": "/assets/afterlight-concept.webp",
+          "caption": "历史 AI 概念图，非实机画面，也非当前 Unity 原型。"
+        },
+        {
+          "id": "progress",
+          "url": "/assets/afterlight-progress.webp",
+          "caption": "历史 UE5 BP_MemoryTarget 截图，非当前 Unity 实现。"
+        }
+      ]
+    }
+  }
+]
