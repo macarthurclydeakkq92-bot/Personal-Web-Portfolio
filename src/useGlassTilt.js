@@ -9,7 +9,7 @@ export function useGlassTilt() {
       ...document.querySelectorAll(
         ".project, .skill, .operator, .index-project, .field-nav > a, .contact-pill, .index-all, .language",
       ),
-    ];
+    ].filter((element) => !element.classList.contains("magic-bento-card"));
     const resets = [];
     const cleanups = elements.map((element) => {
       element.classList.add("glass-tilt");

@@ -4,6 +4,19 @@ import "./style.css";
 import { heroVideo } from "./site.js";
 import projectArchive from "./projects.json";
 import { useGlassTilt } from "./useGlassTilt.js";
+import MagicBento from "./MagicBento.jsx";
+const magicEffects = {
+  textAutoHide: true,
+  enableStars: true,
+  enableSpotlight: true,
+  enableBorderGlow: true,
+  enableTilt: true,
+  enableMagnetism: true,
+  clickEffect: true,
+  spotlightRadius: 700,
+  particleCount: 12,
+  glowColor: "220, 231, 147",
+};
 const copy = {
   en: {
     nav: ["About", "Selected work", "Approach"],
@@ -317,27 +330,29 @@ function App() {
                 {lang === "en" ? "PROJECT INDEX" : "项目索引"}
                 <span>01—05</span>
               </div>
-              {[0, 1, 4].map((i) => (
-                <button
-                  className="index-project"
-                  key={i}
-                  onClick={() => setActive(i)}
-                >
-                  <span className="index-number">0{i + 1}</span>
-                  {projects[i].cover ? (
-                    <img src={projects[i].cover} alt="" />
-                  ) : (
-                    <span className="index-prototype">
-                      <Icon kind="approach" />
+              <MagicBento {...magicEffects} className="index-cards">
+                {[0, 1, 4].map((i) => (
+                  <button
+                    className="index-project"
+                    key={i}
+                    onClick={() => setActive(i)}
+                  >
+                    <span className="index-number">0{i + 1}</span>
+                    {projects[i].cover ? (
+                      <img src={projects[i].cover} alt="" />
+                    ) : (
+                      <span className="index-prototype">
+                        <Icon kind="approach" />
+                      </span>
+                    )}
+                    <span className="index-title">
+                      <strong>{projects[i].title}</strong>
+                      <small>{projects[i].category}</small>
                     </span>
-                  )}
-                  <span className="index-title">
-                    <strong>{projects[i].title}</strong>
-                    <small>{projects[i].category}</small>
-                  </span>
-                  <Icon />
-                </button>
-              ))}
+                    <Icon />
+                  </button>
+                ))}
+              </MagicBento>
               <a className="index-all" href="#work">
                 {t.explore}
                 <Icon />
@@ -426,7 +441,7 @@ function App() {
             <h2>{t.workTitle}</h2>
             <p className="placeholder-note">{t.workNote}</p>
           </div>
-          <div className="project-grid">
+          <MagicBento {...magicEffects} className="project-grid">
             {projects.map((p, i) => (
               <button
                 className={`project project-${i}`}
@@ -479,7 +494,7 @@ function App() {
                 <p className="project-summary">{p.summary}</p>
               </button>
             ))}
-          </div>
+          </MagicBento>
         </section>
         <section className="approach section" id="approach">
           <div className="wrap">
@@ -488,7 +503,7 @@ function App() {
               {t.approach}
             </div>
             <h2>{t.approachTitle}</h2>
-            <div className="skill-grid">
+            <MagicBento {...magicEffects} className="skill-grid">
               {t.skills.map((s, i) => (
                 <article className="skill" key={i}>
                   <div className="skill-top">
@@ -500,7 +515,7 @@ function App() {
                   <span className="skill-tag">{s[3]}</span>
                 </article>
               ))}
-            </div>
+            </MagicBento>
           </div>
         </section>
         <section className="contact section" id="contact">
