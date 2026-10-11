@@ -23,7 +23,7 @@ const copy = {
     nav: ["About", "Selected work", "Approach"],
     contact: "Let’s talk",
     role: "GAME VFX / VISUAL DESIGN / INTERACTION",
-    title: ["Visual worlds,", "made to move."],
+    title: ["Imagined worlds,", "brought to life."],
     intro:
       "Kangcheng Yuan — creating game effects, visual worlds and interactive experiences.",
     explore: "Explore selected work",
@@ -81,7 +81,7 @@ const copy = {
     nav: ["关于我", "精选作品", "创作优势"],
     contact: "联系我",
     role: "游戏特效 / 视觉设计 / 交互设计",
-    title: ["让想象成形，", "让世界流动。"],
+    title: ["构筑想象，", "赋予世界生命。"],
     intro: "袁康成 — 以游戏特效、视觉设计与交互，构建富有感知的世界。",
     explore: "探索精选作品",
     scroll: "向下探索",
