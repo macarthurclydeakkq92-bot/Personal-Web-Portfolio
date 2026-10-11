@@ -1798,3 +1798,179 @@ html[lang="zh-CN"] .hud-hero h1 {
   width: 22px;
   color: var(--lime);
 }
+/* Frosted surfaces and a restrained pointer-driven lift. */
+.hud-nav {
+  background: linear-gradient(120deg, #18211db3, #202a2270);
+  -webkit-backdrop-filter: blur(18px) saturate(120%);
+  backdrop-filter: blur(18px) saturate(120%);
+  border-bottom-color: #e2eccc26;
+  box-shadow:
+    inset 0 1px #ffffff0d,
+    0 8px 28px #040b081a;
+}
+.glass-tilt {
+  --glow-x: 50%;
+  --glow-y: 20%;
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  position: relative;
+  isolation: isolate;
+  -webkit-backdrop-filter: blur(16px) saturate(125%);
+  backdrop-filter: blur(16px) saturate(125%);
+  border: 1px solid #e1eccc38;
+  background-color: #25332b88;
+  background-image:
+    radial-gradient(
+      ellipse at var(--glow-x) var(--glow-y),
+      #e7f4d115,
+      transparent 65%
+    ),
+    linear-gradient(135deg, #e5efd515, #e5efd502 60%);
+  box-shadow:
+    inset 0 1px 0 #ffffff1a,
+    inset 0 -1px 0 #e2edc90a,
+    0 12px 30px #03090725;
+  transform: perspective(1100px) translate3d(0, 0, 0) rotateX(0deg)
+    rotateY(0deg);
+  transition:
+    transform 420ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 300ms,
+    border-color 300ms;
+}
+.project.glass-tilt {
+  padding: 12px 12px 20px;
+  border-radius: 5px;
+  background-color: #26312a55;
+  border-color: #d5e4bc40;
+}
+.project.glass-tilt::before {
+  content: "";
+  position: absolute;
+  inset: 8px 5px -7px -5px;
+  z-index: -1;
+  pointer-events: none;
+  border: 1px solid #dae8c529;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #d8e7c011, #7c947a08);
+  box-shadow: 0 10px 30px #02080430;
+}
+.project-art {
+  border-radius: 2px;
+}
+.project-meta,
+.project-summary {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.skill.glass-tilt {
+  background-color: #30402b55;
+  border-radius: 4px;
+}
+.operator.glass-tilt {
+  background-color: #1c2b2166;
+  border-left: 3px solid #dce79399;
+}
+.index-project.glass-tilt {
+  background-color: #c0d0a94d;
+  color: #e7eddb;
+  border-color: #e1eccc4d;
+}
+.index-project .index-number {
+  color: #bfcea7;
+}
+.index-project .index-prototype {
+  border-color: #c2d5a459;
+}
+.field-nav > a.glass-tilt {
+  background-color: #59684c40;
+}
+.field-nav > a.field-primary.glass-tilt,
+.index-all.glass-tilt {
+  background-color: #dce793a3;
+  color: #182113;
+  border-color: #edf5bf80;
+}
+.field-nav > a::after {
+  background: #bccc9f29;
+  border-color: #e2edc944;
+}
+.contact-pill.glass-tilt {
+  background-color: #d4e6bc15;
+}
+.language.glass-tilt {
+  padding: 0 11px;
+  min-height: 36px;
+  background-color: #d4e6bc0b;
+  border-radius: 2px;
+}
+.project-number,
+.project-open {
+  background: #14201cb3;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid #d6e4c333;
+}
+dialog {
+  background: #18221bec;
+  -webkit-backdrop-filter: blur(24px) saturate(120%);
+  backdrop-filter: blur(24px) saturate(120%);
+  border-color: #deebc74d;
+  box-shadow:
+    inset 0 1px #ffffff1a,
+    0 30px 100px #0008;
+}
+.dialog-close {
+  background: #253229db;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .glass-tilt.is-hovered {
+    transform: perspective(1100px) translate3d(0, -6px, 0)
+      rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+    transition:
+      transform 120ms ease-out,
+      box-shadow 300ms,
+      border-color 300ms;
+    border-color: #e5f3cd80;
+    box-shadow:
+      inset 0 1px #ffffff30,
+      0 22px 42px #02090755,
+      0 0 20px #dce79309;
+    z-index: 2;
+  }
+  .language.is-hovered,
+  .contact-pill.is-hovered {
+    transform: perspective(1100px) translate3d(0, -3px, 0)
+      rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+  }
+}
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .glass-tilt,
+  .glass-tilt.is-hovered,
+  .index-project:hover {
+    transform: none;
+    transition: none;
+  }
+  .project:hover .project-image,
+  .project:hover .art {
+    transform: none;
+  }
+}
+@media (max-width: 600px) {
+  .project.glass-tilt {
+    padding: 9px 9px 16px;
+  }
+  .language.glass-tilt {
+    padding: 0 7px;
+    min-height: 32px;
+  }
+  .nav-actions {
+    gap: 10px;
+  }
+  .project-meta,
+  .project-summary {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+}

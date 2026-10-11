@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./style.css";
 import { heroVideo } from "./site.js";
 import projectArchive from "./projects.json";
+import { useGlassTilt } from "./useGlassTilt.js";
 const copy = {
   en: {
     nav: ["About", "Selected work", "Approach"],
@@ -166,6 +167,7 @@ function Icon({ kind }) {
   );
 }
 function App() {
+  useGlassTilt();
   const [lang, setLang] = useState(() => {
     try {
       return localStorage.getItem("scone-language") === "zh" ? "zh" : "en";
