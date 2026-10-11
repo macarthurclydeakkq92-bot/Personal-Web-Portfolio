@@ -5,6 +5,7 @@ import { heroVideo } from "./site.js";
 import projectArchive from "./projects.json";
 import { useGlassTilt } from "./useGlassTilt.js";
 import MagicBento from "./MagicBento.jsx";
+import { useSceneMotion } from "./useSceneMotion.js";
 const magicEffects = {
   textAutoHide: true,
   enableStars: true,
@@ -179,6 +180,23 @@ function Icon({ kind }) {
     </svg>
   );
 }
+function MotionHeading({ as: Tag = "h2", lines, accent = false }) {
+  const text = Array.isArray(lines) ? lines : lines.split("\n");
+  return (
+    <Tag className="motion-heading" aria-label={text.join(" ")}>
+      {text.map((line, i) => (
+        <span className="motion-line" key={i}>
+          <span
+            className={`motion-word ${accent && i === text.length - 1 ? "title-accent" : ""}`}
+            aria-hidden="true"
+          >
+            {line}
+          </span>
+        </span>
+      ))}
+    </Tag>
+  );
+}
 function App() {
   useGlassTilt();
   const [lang, setLang] = useState(() => {
@@ -188,6 +206,7 @@ function App() {
       return "en";
     }
   });
+  useSceneMotion(lang);
   const [active, setActive] = useState(null);
   const [videoFailed, setVideoFailed] = useState(false);
   const t = copy[lang];
@@ -218,6 +237,20 @@ function App() {
   }, [active]);
   return (
     <>
+      <div className="opening-curtain" aria-hidden="true">
+        <div className="opening-lockup">
+          <span className="opening-kicker">SCONE STUDIO / VISUAL PRACTICE</span>
+          <div className="opening-mask">
+            <span className="opening-name">
+              scone<span>®</span>
+            </span>
+          </div>
+          <span className="opening-rule" />
+          <span className="opening-meta">
+            GAME VFX · VISUAL DESIGN · INTERACTION
+          </span>
+        </div>
+      </div>
       <a className="skip" href="#about">
         {lang === "en" ? "Skip to content" : "跳转至内容"}
       </a>
@@ -285,11 +318,7 @@ function App() {
               <div className="hero-index">
                 PORTFOLIO / VOL. 01 <span>2026</span>
               </div>
-              <h1>
-                {t.title[0]}
-                <br />
-                <span>{t.title[1]}</span>
-              </h1>
+              <MotionHeading as="h1" lines={t.title} accent />
               <p className="hero-intro">{t.intro}</p>
               <nav
                 className="field-nav"
@@ -385,7 +414,7 @@ function App() {
               <span className="portrait-note">PORTRAIT PLACEHOLDER</span>
             </div>
             <div className="about-copy">
-              <h2>{t.aboutTitle}</h2>
+              <MotionHeading lines={t.aboutTitle} />
               <p className="body-copy">{t.bio}</p>
               <p className="placeholder-note">{t.note}</p>
               <a className="text-link" href="#contact">
@@ -438,7 +467,7 @@ function App() {
             {t.work}
           </div>
           <div className="section-heading">
-            <h2>{t.workTitle}</h2>
+            <MotionHeading lines={t.workTitle} />
             <p className="placeholder-note">{t.workNote}</p>
           </div>
           <MagicBento {...magicEffects} className="project-grid">
@@ -502,7 +531,7 @@ function App() {
               <span>03 /</span>
               {t.approach}
             </div>
-            <h2>{t.approachTitle}</h2>
+            <MotionHeading lines={t.approachTitle} />
             <MagicBento {...magicEffects} className="skill-grid">
               {t.skills.map((s, i) => (
                 <article className="skill" key={i}>
@@ -525,11 +554,7 @@ function App() {
               <span className="dot" />
               {t.end}
             </div>
-            <h2>
-              {t.endTitle[0]}
-              <br />
-              <em>{t.endTitle[1]}</em>
-            </h2>
+            <MotionHeading lines={t.endTitle} accent />
             <p>{t.endText}</p>
             <a className="pending-contact" href="mailto:yuanscone@gmail.com">
               yuanscone@gmail.com

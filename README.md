@@ -28,3 +28,9 @@ Domain attachment and DNS changes require access to your Cloudflare account and 
 ## Archive import
 
 Five public projects are integrated, with original English content and Simplified Chinese translations. Team imagery is captioned; Afterlight’s historical AI concept and UE5 screenshot are clearly distinguished from its current paused Unity prototype. Source provenance is retained in `docs/asset-sources.json`. The three hidden seed projects remain in `docs/archive-projects.json` and are not published as finished work. See `docs/archive-import.md` for details.
+
+## Cinematic motion
+
+`src/useSceneMotion.js` registers GSAP ScrollTrigger and owns the opening and scroll choreography. A roughly five-second opening combines a studio mark, curtain reveal, compressed/skewed masked typography, circular image reveal and staggered navigation panels. Scrolling away skips the remaining opening without locking the page.
+
+Section titles enter through line masks before viewport-triggered card and image reveals. Cards move through outer `.scene-card-slot` frames while MagicBento keeps ownership of the actual interactive card transforms. Desktop images have a small smoothed parallax; mobile retains reveals without parallax. Effects play once per viewport entry and use transform/clip-path, without animating blur or layout dimensions. Reduced-motion preferences show all content immediately. Language changes and media-query cleanup revert the GSAP context and its ScrollTriggers.

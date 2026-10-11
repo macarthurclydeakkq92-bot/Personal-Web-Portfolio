@@ -202,8 +202,7 @@ const ParticleCard = ({
 
       if (enableTilt) {
         gsap.to(element, {
-          rotateX: 0,
-          rotateY: 0,
+          overwrite: "auto",
           y: -4,
           duration: 0.3,
           ease: "power2.out",
@@ -218,6 +217,7 @@ const ParticleCard = ({
 
       if (enableTilt) {
         gsap.to(element, {
+          overwrite: "auto",
           rotateX: 0,
           rotateY: 0,
           y: 0,
@@ -228,6 +228,7 @@ const ParticleCard = ({
 
       if (enableMagnetism) {
         gsap.to(element, {
+          overwrite: "auto",
           x: 0,
           y: 0,
           duration: 0.3,
@@ -251,6 +252,7 @@ const ParticleCard = ({
         const rotateY = ((x - centerX) / centerX) * 3;
 
         gsap.to(element, {
+          overwrite: "auto",
           rotateX,
           rotateY,
           duration: 0.1,
@@ -264,6 +266,7 @@ const ParticleCard = ({
         const magnetY = Math.max(-5, Math.min(5, (y - centerY) * 0.05)) - 4;
 
         magnetismAnimationRef.current = gsap.to(element, {
+          overwrite: "auto",
           x: magnetX,
           y: magnetY,
           duration: 0.3,
@@ -363,17 +366,23 @@ const ParticleCard = ({
   ]);
 
   if (asChild)
-    return cloneElement(children, {
-      ref: cardRef,
-      className: `${children.props.className || ""} ${className} particle-container`,
-      style: { ...children.props.style, ...style },
-      children: (
-        <>
-          {children.props.children}
-          <div className="magic-bento-effects" aria-hidden="true" />
-        </>
-      ),
-    });
+    return (
+      <div
+        className={`scene-card-slot ${children.props.className?.includes("project-0") ? "scene-card-featured" : ""}`}
+      >
+        {cloneElement(children, {
+          ref: cardRef,
+          className: `${children.props.className || ""} ${className} particle-container`,
+          style: { ...children.props.style, ...style },
+          children: (
+            <>
+              {children.props.children}
+              <div className="magic-bento-effects" aria-hidden="true" />
+            </>
+          ),
+        })}
+      </div>
+    );
 
   return (
     <div

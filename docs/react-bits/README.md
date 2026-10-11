@@ -25,3 +25,5 @@ The direct registry endpoint returned HTTP 403 through the environment proxy. Th
 - All rendering paths use ParticleCard lifecycle cleanup, including the no-stars option.
 
 No external runtime requests are needed for these effects.
+
+Cinematic entrances now wrap each original card in `.scene-card-slot` so ScrollTrigger entrance transforms and MagicBento hover transforms remain independent. Featured project grid placement is transferred to its outer slot; the original button/article remains the interactive element. Hover tweens use GSAP's automatic overwrite to avoid an earlier enter/leave tween resetting pointer-driven rotation.

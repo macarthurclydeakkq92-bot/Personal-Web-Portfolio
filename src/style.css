@@ -1974,3 +1974,90 @@ dialog {
     padding-right: 3px;
   }
 }
+/* Masked typography and independent entrance movement. */
+.motion-heading {
+  overflow: visible;
+}
+.motion-heading > .motion-line {
+  display: block;
+  overflow: clip;
+  color: inherit;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+.motion-word {
+  display: block;
+  transform-origin: left center;
+}
+.motion-word.title-accent {
+  color: var(--lime);
+}
+
+.opening-curtain {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #0d1412;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.opening-lockup {
+  width: min(490px, calc(100% - 70px));
+}
+.opening-kicker,
+.opening-meta {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #94a18b;
+}
+.opening-mask {
+  overflow: hidden;
+  margin: 18px 0 28px;
+}
+.opening-name {
+  display: block;
+  font-size: clamp(76px, 13vw, 150px);
+  letter-spacing: -0.07em;
+  line-height: 1.1;
+  font-weight: 600;
+  color: var(--lime);
+}
+.opening-name > span {
+  display: inline-block;
+  font-size: 18px;
+  vertical-align: top;
+  letter-spacing: 0;
+  margin: 12px 0 0 10px;
+}
+.opening-rule {
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: #dce79388;
+  margin-bottom: 22px;
+}
+.scene-motion-enabled .project-image {
+  transition: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .opening-curtain {
+    display: none !important;
+  }
+}
+
+.scene-card-slot {
+  min-width: 0;
+  width: 100%;
+}
+.project-grid > .scene-card-featured {
+  grid-column: 1 / -1;
+}
+.scene-card-slot > .project {
+  width: 100%;
+}
+.skill-grid > .scene-card-slot > .skill {
+  height: 100%;
+}
