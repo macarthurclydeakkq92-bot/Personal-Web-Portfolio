@@ -6,6 +6,7 @@ import projectArchive from "./projects.json";
 import { useGlassTilt } from "./useGlassTilt.js";
 import MagicBento from "./MagicBento.jsx";
 import { useSceneMotion } from "./useSceneMotion.js";
+import { useMotionPreference } from "./useMotionPreference.js";
 const magicEffects = {
   textAutoHide: true,
   enableStars: true,
@@ -198,7 +199,8 @@ function MotionHeading({ as: Tag = "h2", lines, accent = false }) {
   );
 }
 function App() {
-  useGlassTilt();
+  const motion = useMotionPreference();
+  useGlassTilt(motion.enabled);
   const [lang, setLang] = useState(() => {
     try {
       return localStorage.getItem("scone-language") === "zh" ? "zh" : "en";
@@ -206,7 +208,7 @@ function App() {
       return "en";
     }
   });
-  useSceneMotion(lang);
+  useSceneMotion(lang, motion.enabled);
   const [active, setActive] = useState(null);
   const [videoFailed, setVideoFailed] = useState(false);
   const t = copy[lang];
@@ -260,6 +262,21 @@ function App() {
         </a>
         <span className="nav-caption">INDEPENDENT CREATIVE / 袁康成</span>
         <div className="nav-actions">
+          <select
+            className="motion-control"
+            value={motion.mode}
+            onChange={(e) => motion.setMode(e.target.value)}
+            aria-label={lang === "en" ? "Motion preference" : "动效设置"}
+            title={
+              lang === "en"
+                ? "On: full motion / Auto: follow system / Off: static"
+                : "开启：完整动效 / 自动：跟随系统 / 关闭：静态"
+            }
+          >
+            <option value="on">FX ON</option>
+            <option value="system">FX AUTO</option>
+            <option value="off">FX OFF</option>
+          </select>
           <div className="language" aria-label="Language">
             <button aria-pressed={lang === "en"} onClick={() => setLang("en")}>
               EN
@@ -359,7 +376,11 @@ function App() {
                 {lang === "en" ? "PROJECT INDEX" : "项目索引"}
                 <span>01—05</span>
               </div>
-              <MagicBento {...magicEffects} className="index-cards">
+              <MagicBento
+                {...magicEffects}
+                disableAnimations={!motion.enabled}
+                className="index-cards"
+              >
                 {[0, 1, 4].map((i) => (
                   <button
                     className="index-project"
@@ -470,7 +491,11 @@ function App() {
             <MotionHeading lines={t.workTitle} />
             <p className="placeholder-note">{t.workNote}</p>
           </div>
-          <MagicBento {...magicEffects} className="project-grid">
+          <MagicBento
+            {...magicEffects}
+            disableAnimations={!motion.enabled}
+            className="project-grid"
+          >
             {projects.map((p, i) => (
               <button
                 className={`project project-${i}`}
@@ -532,7 +557,11 @@ function App() {
               {t.approach}
             </div>
             <MotionHeading lines={t.approachTitle} />
-            <MagicBento {...magicEffects} className="skill-grid">
+            <MagicBento
+              {...magicEffects}
+              disableAnimations={!motion.enabled}
+              className="skill-grid"
+            >
               {t.skills.map((s, i) => (
                 <article className="skill" key={i}>
                   <div className="skill-top">

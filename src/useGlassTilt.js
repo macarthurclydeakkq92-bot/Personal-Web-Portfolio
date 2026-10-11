@@ -1,10 +1,12 @@
 import { useEffect } from "react";
 
 // Pointer-driven transforms stay outside React rendering and never change layout.
-export function useGlassTilt() {
+export function useGlassTilt(enabled = true) {
   useEffect(() => {
-    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const pointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+    if (!enabled) return;
+    const pointer = window.matchMedia(
+      "(any-hover: hover) and (any-pointer: fine)",
+    );
     const elements = [
       ...document.querySelectorAll(
         ".project, .skill, .operator, .index-project, .field-nav > a, .contact-pill, .index-all, .language",
@@ -26,8 +28,7 @@ export function useGlassTilt() {
       };
       resets.push(reset);
       const move = (event) => {
-        if (event.pointerType !== "mouse" || motion.matches || !pointer.matches)
-          return;
+        if (event.pointerType !== "mouse" || !pointer.matches) return;
         bounds ??= element.getBoundingClientRect();
         element.classList.add("is-hovered");
         position = { x: event.clientX, y: event.clientY };
@@ -42,7 +43,7 @@ export function useGlassTilt() {
             0,
             Math.min(1, (position.y - bounds.top) / bounds.height),
           );
-          const angle = element.matches(".project") ? 2.5 : 4;
+          const angle = element.matches(".project") ? 3 : 5;
           element.style.setProperty(
             "--tilt-x",
             `${((0.5 - y) * angle * 2).toFixed(2)}deg`,
@@ -71,18 +72,18 @@ export function useGlassTilt() {
       };
     });
     const resetAll = () => resets.forEach((reset) => reset());
-    motion.addEventListener("change", resetAll);
+
     pointer.addEventListener("change", resetAll);
     window.addEventListener("blur", resetAll);
     window.addEventListener("scroll", resetAll, { passive: true });
     window.addEventListener("resize", resetAll);
     return () => {
       cleanups.forEach((cleanup) => cleanup());
-      motion.removeEventListener("change", resetAll);
+
       pointer.removeEventListener("change", resetAll);
       window.removeEventListener("blur", resetAll);
       window.removeEventListener("scroll", resetAll);
       window.removeEventListener("resize", resetAll);
     };
-  }, []);
+  }, [enabled]);
 }

@@ -1924,9 +1924,9 @@ dialog {
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 }
-@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+@media (any-hover: hover) and (any-pointer: fine) {
   .glass-tilt.is-hovered {
-    transform: perspective(1100px) translate3d(0, -6px, 0)
+    transform: perspective(1100px) translate3d(0, -10px, 0)
       rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
     transition:
       transform 120ms ease-out,
@@ -1941,11 +1941,11 @@ dialog {
   }
   .language.is-hovered,
   .contact-pill.is-hovered {
-    transform: perspective(1100px) translate3d(0, -3px, 0)
+    transform: perspective(1100px) translate3d(0, -5px, 0)
       rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
   }
 }
-@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+@media (any-hover: none) {
   .glass-tilt,
   .glass-tilt.is-hovered,
   .index-project:hover {
@@ -2043,7 +2043,7 @@ dialog {
   transition: none;
 }
 @media (prefers-reduced-motion: reduce) {
-  .opening-curtain {
+  html:not([data-motion="on"]) .opening-curtain {
     display: none !important;
   }
 }
@@ -2060,4 +2060,59 @@ dialog {
 }
 .skill-grid > .scene-card-slot > .skill {
   height: 100%;
+}
+
+.motion-control {
+  color: #dce793;
+  font: inherit;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  background: #253229b3;
+  border: 1px solid #deebc740;
+  border-radius: 2px;
+  height: 36px;
+  width: 76px;
+  padding: 0 6px;
+  cursor: pointer;
+}
+.motion-control:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
+}
+html[data-motion="off"] .glass-tilt {
+  transition: none;
+}
+@media (max-width: 600px) {
+  .motion-control {
+    width: 65px;
+    height: 32px;
+    font-size: 8px;
+  }
+  .nav-actions {
+    gap: 6px;
+  }
+  .hud-nav {
+    gap: 8px;
+  }
+}
+@media (max-width: 380px) {
+  .hud-nav .brand {
+    font-size: 24px;
+  }
+  .motion-control {
+    width: 58px;
+    padding: 0 3px;
+  }
+  .hud-nav .contact-pill {
+    padding: 8px;
+    gap: 6px;
+    font-size: 9px;
+  }
+  .hud-nav .language {
+    gap: 4px;
+    padding: 0 5px;
+  }
+  .hud-nav .nav-actions {
+    gap: 5px;
+  }
 }

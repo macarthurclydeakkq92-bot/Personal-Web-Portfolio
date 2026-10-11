@@ -252,12 +252,18 @@
 .magic-bento-preserve .magic-bento-ripple {
   clip-path: inset(0);
 }
-@media (prefers-reduced-motion: reduce), (hover: none), (pointer: coarse) {
-  .magic-bento-scope .magic-bento-card {
+html[data-motion="off"] .magic-bento-card {
+  transform: none !important;
+}
+html[data-motion="off"] .magic-bento-card--border-glow::after {
+  opacity: 0;
+}
+html[data-motion="off"] .global-spotlight {
+  display: none;
+}
+@media (any-hover: none) {
+  .magic-bento-card {
     transform: none !important;
-  }
-  .magic-bento-scope .magic-bento-card--border-glow::after {
-    opacity: 0;
   }
   .global-spotlight {
     display: none;

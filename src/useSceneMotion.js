@@ -4,11 +4,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export function useSceneMotion(language) {
+export function useSceneMotion(language, enabled) {
   const opened = useRef(false);
   useLayoutEffect(() => {
     const media = gsap.matchMedia();
-    media.add("(prefers-reduced-motion: no-preference)", () => {
+    media.add("(min-width: 0px)", () => {
+      if (!enabled) return;
       const context = gsap.context(() => {
         document.documentElement.classList.add("scene-motion-enabled");
         const hero = document.querySelector(".hud-hero");
@@ -40,7 +41,12 @@ export function useSceneMotion(language) {
           );
         };
         let opening;
-        const startAtTop = window.scrollY < 80 && !window.location.hash;
+        // Fresh landings start on the actual opening, even if Chrome restores old scroll.
+        if (!opened.current && !window.location.hash) {
+          window.history.scrollRestoration = "manual";
+          window.scrollTo({ top: 0, behavior: "instant" });
+        }
+        const startAtTop = !window.location.hash;
         if (!opened.current && startAtTop) {
           opened.current = true;
           gsap.set(curtain, {
@@ -284,5 +290,5 @@ export function useSceneMotion(language) {
       };
     });
     return () => media.revert();
-  }, [language]);
+  }, [language, enabled]);
 }

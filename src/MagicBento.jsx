@@ -203,7 +203,7 @@ const ParticleCard = ({
       if (enableTilt) {
         gsap.to(element, {
           overwrite: "auto",
-          y: -4,
+          y: -10,
           duration: 0.3,
           ease: "power2.out",
           transformPerspective: 1000,
@@ -248,8 +248,8 @@ const ParticleCard = ({
       const centerY = rect.height / 2;
 
       if (enableTilt) {
-        const rotateX = ((y - centerY) / centerY) * -3;
-        const rotateY = ((x - centerX) / centerX) * 3;
+        const rotateX = ((y - centerY) / centerY) * -5;
+        const rotateY = ((x - centerX) / centerX) * 5;
 
         gsap.to(element, {
           overwrite: "auto",
@@ -263,7 +263,7 @@ const ParticleCard = ({
 
       if (enableMagnetism) {
         const magnetX = Math.max(-5, Math.min(5, (x - centerX) * 0.05));
-        const magnetY = Math.max(-5, Math.min(5, (y - centerY) * 0.05)) - 4;
+        const magnetY = Math.max(-5, Math.min(5, (y - centerY) * 0.05)) - 10;
 
         magnetismAnimationRef.current = gsap.to(element, {
           overwrite: "auto",
@@ -570,14 +570,13 @@ const BentoCardGrid = ({
 );
 
 const useMobileDetection = () => {
-  const query =
-    "(max-width: 768px), (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce)";
+  const query = "(any-hover: hover) and (any-pointer: fine)";
   const [isMobile, setIsMobile] = useState(
-    () => typeof window !== "undefined" && window.matchMedia(query).matches,
+    () => typeof window !== "undefined" && !window.matchMedia(query).matches,
   );
   useEffect(() => {
     const media = window.matchMedia(query);
-    const check = () => setIsMobile(media.matches);
+    const check = () => setIsMobile(!media.matches);
     check();
     media.addEventListener("change", check);
     return () => media.removeEventListener("change", check);
