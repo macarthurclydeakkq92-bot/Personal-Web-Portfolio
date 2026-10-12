@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { createRoot } from "react-dom/client";
+import "@fontsource/rajdhani/latin-500.css";
+import "@fontsource/rajdhani/latin-600.css";
+import "@fontsource/rajdhani/latin-700.css";
 import "./style.css";
 import { heroVideo } from "./site.js";
 import projectArchive from "./projects.json";
@@ -243,10 +246,13 @@ function App() {
     <>
       <div className="opening-curtain" aria-hidden="true">
         <div className="opening-lockup">
-          <span className="opening-kicker">SCONE STUDIO / VISUAL PRACTICE</span>
+          <span className="opening-kicker">
+            KANGCHENG YUAN / VISUAL PRACTICE
+          </span>
           <div className="opening-mask">
             <span className="opening-name">
-              scone<span>®</span>
+              <span>KANGCHENG</span>
+              <span>YUAN</span>
             </span>
           </div>
           <span className="opening-rule" />
@@ -259,8 +265,9 @@ function App() {
         {lang === "en" ? "Skip to content" : "跳转至内容"}
       </a>
       <header className="nav hud-nav">
-        <a className="brand" href="#home" aria-label="SCONE home">
-          scone<span>®</span>
+        <a className="brand" href="#home" aria-label="Kangcheng Yuan home">
+          <span>KANGCHENG</span>
+          <span>YUAN</span>
         </a>
         <span className="nav-caption">INDEPENDENT CREATIVE / 袁康成</span>
         <div className="nav-actions">
@@ -328,7 +335,7 @@ function App() {
             <span className="radar-cross cross-one">+</span>
             <span className="radar-cross cross-two">+</span>
             <span className="radar-marker" />
-            <span className="radar-label">SCONE / CREATIVE FIELD</span>
+            <span className="radar-label">KANGCHENG YUAN / CREATIVE FIELD</span>
           </div>
           {heroVideo && !videoFailed && (
             <video
@@ -378,7 +385,7 @@ function App() {
                 ))}
               </nav>
               <div className="operator">
-                <span className="operator-mark">S /</span>
+                <span className="operator-mark">KY /</span>
                 <div>
                   <strong>KANGCHENG YUAN</strong>
                   <span>
@@ -387,7 +394,7 @@ function App() {
                       : "游戏特效 · 视觉 · 交互"}
                   </span>
                 </div>
-                <span className="operator-code">SC—01</span>
+                <span className="operator-code">KY—01</span>
               </div>
             </div>
             <aside
@@ -453,7 +460,7 @@ function App() {
             <div className="portrait">
               <Art variant="portrait" />
               <div className="portrait-label">
-                SCONE
+                KANGCHENG YUAN
                 <br />
                 <span>CREATIVE PRACTICE</span>
               </div>
@@ -616,9 +623,10 @@ function App() {
             </a>
             <footer>
               <a className="brand" href="#home">
-                scone<span>®</span>
+                <span>KANGCHENG</span>
+                <span>YUAN</span>
               </a>
-              <span>© 2026 SCONE · {t.copyright}</span>
+              <span>© 2026 KANGCHENG YUAN · {t.copyright}</span>
               <a href="#home">{t.top} ↑</a>
             </footer>
           </div>

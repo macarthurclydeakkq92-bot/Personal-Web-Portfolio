@@ -164,6 +164,7 @@ export function useSceneMotion(language, enabled) {
           );
         } else {
           opened.current = true;
+          gsap.set(lines, { clearProps: "transform,clipPath" });
           hero.dataset.opening = "complete";
         }
 

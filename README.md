@@ -42,3 +42,7 @@ Hover capabilities are detected with `any-hover` / `any-pointer` rather than vie
 The uploaded environment-art final, technical PDF, fracture render and solver-motion render add Coastal Shrine and Procedural Motion, bringing the portfolio to seven projects. Original media hashes and web encoding notes are in `docs/new-media-manifest.json`. Three optimized silent videos total about 3.3 MB; they load only when explicitly played in a project dialog (`preload="none"`). The Coastal Shrine document credits external assets and documents the effects actually implemented.
 
 `src/useOrbitMotion.js` rotates nested SVG ring layers independently of the opening, with opposite directions, a slower tick ring and a scanning layer. It pauses outside the hero and in hidden tabs, and respects the shared FX setting. Title depth uses layered text shadows rather than an additional renderer. No new dependency was needed.
+
+## Display typography and identity
+
+Public identity is KANGCHENG YUAN, with a KY favicon and no registered-trademark symbol. Rajdhani Latin 500/600/700 is bundled locally through `@fontsource/rajdhani` for an angular anime/mecha display treatment. Body and Chinese text retain readable system fallbacks. Font license is in `docs/fonts/Rajdhani-LICENSE.txt`.

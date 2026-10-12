@@ -2335,3 +2335,111 @@ h1 .motion-word.title-accent {
       0 15px 25px #02080566;
   }
 }
+/* Self-hosted angular display type, inspired by anime and mecha interfaces. */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+  font-family: "Rajdhani", "Arial Narrow", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  line-height: 1;
+  white-space: nowrap;
+}
+.brand > span {
+  display: block;
+  font: inherit;
+  vertical-align: baseline;
+  letter-spacing: inherit;
+  margin: 0;
+}
+.motion-heading,
+.opening-name,
+.project-meta h3,
+.skill h3,
+.portrait-label,
+.operator strong {
+  font-family: "Rajdhani", "Microsoft YaHei", sans-serif;
+}
+.motion-heading {
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+html[lang="en"] .motion-heading .motion-word {
+  text-transform: uppercase;
+}
+.project-meta h3,
+.skill h3 {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.operator strong {
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  font-size: 12px;
+}
+.opening-name {
+  font-size: clamp(42px, 9vw, 104px);
+  font-weight: 700;
+  letter-spacing: 0.045em;
+}
+.opening-name > span {
+  display: block;
+  font: inherit;
+  letter-spacing: inherit;
+  margin: 0;
+  vertical-align: baseline;
+}
+.portrait-label {
+  font-size: 22px;
+  letter-spacing: 0.03em;
+}
+@media (max-width: 600px) {
+  .hud-nav .brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    font-size: 19px;
+    line-height: 0.95;
+    letter-spacing: 0.035em;
+  }
+  footer .brand {
+    font-size: 22px;
+  }
+  .portrait-label {
+    font-size: 21px;
+  }
+}
+@media (max-width: 380px) {
+  .hud-nav .brand {
+    font-size: 16px;
+  }
+  footer .brand {
+    font-size: 20px;
+  }
+}
+.hud-nav .brand,
+.hud-nav .language,
+.hud-nav .contact-pill {
+  flex-shrink: 0;
+}
+.hud-nav .language,
+.hud-nav .language button,
+.hud-nav .contact-pill {
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .hud-nav .contact-pill {
+    padding: 9px;
+    gap: 8px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 380px) {
+  .hud-nav .contact-pill {
+    padding: 8px;
+    gap: 6px;
+    font-size: 9px;
+  }
+}
