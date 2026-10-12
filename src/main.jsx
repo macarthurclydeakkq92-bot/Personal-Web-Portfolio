@@ -654,12 +654,16 @@ function App() {
             {(photographs.length ? photographs : [null, null, null]).map(
               (photo, i) => (
                 <figure className="photography-card" key={photo?.id || i}>
-                  <div className="photograph-frame">
+                  <div
+                    className="photograph-frame"
+                    style={photo ? { aspectRatio: `${photo.width} / ${photo.height}` } : undefined}
+                  >
                     {photo ? (
                       <a
                         href={photo.src}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`${photo.caption?.[lang] || photo.caption?.en} — ${lang === "zh" ? "查看大图（新标签页）" : "View full photo (new tab)"}`}
                       >
                         <img
                           src={photo.src}

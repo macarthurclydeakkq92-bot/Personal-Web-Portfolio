@@ -1,1 +1,50 @@
-[]
+[
+  {
+    "id": "panorama-01",
+    "src": "/assets/photography/panorama-01.webp",
+    "width": 2400,
+    "height": 660,
+    "caption": { "en": "A walk around campus", "zh": "校园里走走" },
+    "alt": { "en": "A panoramic view of brick campus buildings, bare trees and stone steps beneath a blue sky.", "zh": "蓝天下的校园全景，红砖建筑、落叶树和石阶。" }
+  },
+  {
+    "id": "panorama-02",
+    "src": "/assets/photography/panorama-02.webp",
+    "width": 2400,
+    "height": 660,
+    "caption": { "en": "An afternoon outside", "zh": "午后出门" },
+    "alt": { "en": "A redbrick building beside a pine tree, with the city visible in the distance.", "zh": "松树旁的红砖建筑，远处可以看到城市。" }
+  },
+  {
+    "id": "panorama-03",
+    "src": "/assets/photography/panorama-03.webp",
+    "width": 2400,
+    "height": 1002,
+    "caption": { "en": "When the street lights come on", "zh": "街灯亮起的时候" },
+    "alt": { "en": "A town street at twilight, with a church steeple, glowing lamps and traffic light trails under a purple sky.", "zh": "紫色暮光中的街道，教堂尖塔、亮起的街灯和车流光轨。" }
+  },
+  {
+    "id": "panorama-04",
+    "src": "/assets/photography/panorama-04.webp",
+    "width": 2400,
+    "height": 1090,
+    "caption": { "en": "The last light of the day", "zh": "一天最后的光" },
+    "alt": { "en": "Brick campus buildings on a sloping lawn beneath a warm sunset sky.", "zh": "暖色夕阳下，草坡上的校园红砖建筑。" }
+  },
+  {
+    "id": "panorama-05",
+    "src": "/assets/photography/panorama-05.webp",
+    "width": 2400,
+    "height": 666,
+    "caption": { "en": "A quiet place to pause", "zh": "停下来坐一会儿" },
+    "alt": { "en": "A stone bench and grass beneath trees at sunset, with a glimpse of the city beyond.", "zh": "日落时树下的石凳与草地，远处露出城市的一角。" }
+  },
+  {
+    "id": "panorama-06",
+    "src": "/assets/photography/panorama-06.webp",
+    "width": 2400,
+    "height": 608,
+    "caption": { "en": "Sunset through the trees", "zh": "树影之间的日落" },
+    "alt": { "en": "The setting sun shining through foliage above a wide view of the city.", "zh": "夕阳穿过树叶，下方是开阔的城市景色。" }
+  }
+]

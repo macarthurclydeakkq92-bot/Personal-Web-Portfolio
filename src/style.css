@@ -2613,7 +2613,8 @@ html[lang="en"] .motion-heading .motion-word {
 }
 .interest-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   gap: 24px;
 }
 .photography-card {
@@ -2630,10 +2631,14 @@ html[lang="en"] .motion-heading .motion-word {
   display: block;
   height: 100%;
 }
+.photograph-frame a:focus-visible {
+  outline: 2px solid var(--accent, #c5d993);
+  outline-offset: -3px;
+}
 .photograph-frame img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 .photo-empty {
