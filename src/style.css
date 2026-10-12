@@ -2444,20 +2444,136 @@ html[lang="en"] .motion-heading .motion-word {
   }
 }
 /* One display family across the hero's introduction and interface labels. */
-.hero-intro, .field-nav, .operator, .hero-projects {
+.hero-intro,
+.field-nav,
+.operator,
+.hero-projects {
   font-family: "Rajdhani", "Microsoft YaHei", sans-serif;
 }
-.hero-intro { font-size: 16px; font-weight: 500; line-height: 1.6; }
-.field-nav > a { font-size: 14px; font-weight: 600; letter-spacing: .025em; }
-.field-nav > a.field-primary { font-weight: 600; }
-.field-number { font-weight: 500; font-size: 10px; }
-.operator div > span { font-size: 11px; font-weight: 500; }
-.index-title strong { font-size: 14px; font-weight: 600; }
-.index-title small { font-size: 10px; font-weight: 500; }
-.index-all { font-size: 13px; font-weight: 600; }
-@media(max-width:600px) {
-  .hero-intro { font-size: 15px; }
-  .field-nav > a { font-size: 13px; }
-  .index-title strong { font-size: 13px; }
-  .index-title small { font-size: 10px; }
+.hero-intro {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+.field-nav > a {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+.field-nav > a.field-primary {
+  font-weight: 600;
+}
+.field-number {
+  font-weight: 500;
+  font-size: 10px;
+}
+.operator div > span {
+  font-size: 11px;
+  font-weight: 500;
+}
+.index-title strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+.index-title small {
+  font-size: 10px;
+  font-weight: 500;
+}
+.index-all {
+  font-size: 13px;
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  .hero-intro {
+    font-size: 15px;
+  }
+  .field-nav > a {
+    font-size: 13px;
+  }
+  .index-title strong {
+    font-size: 13px;
+  }
+  .index-title small {
+    font-size: 10px;
+  }
+}
+.case-trailer {
+  margin: 28px 0;
+}
+.youtube-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid #dce79340;
+  background: #0a100d;
+}
+.youtube-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.youtube-launch {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: #0a100d;
+  color: var(--lime);
+}
+.youtube-launch img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.65);
+}
+.youtube-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 66px;
+  height: 66px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #dce79390;
+  background: #1d2b1ebf;
+  border-radius: 50%;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.youtube-label {
+  position: absolute;
+  bottom: 22px;
+  left: 24px;
+  font-family: "Rajdhani", "Microsoft YaHei", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+}
+.youtube-external {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  color: #c9d8b4;
+  font-size: 11px;
+  padding: 13px 0 3px;
+}
+.youtube-launch:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: -5px;
+}
+@media (max-width: 600px) {
+  .youtube-play {
+    width: 48px;
+    height: 48px;
+  }
+  .youtube-label {
+    bottom: 14px;
+    left: 14px;
+    font-size: 10px;
+  }
 }

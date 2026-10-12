@@ -8,6 +8,7 @@ import { heroVideo } from "./site.js";
 import projectArchive from "./projects.json";
 import { useGlassTilt } from "./useGlassTilt.js";
 import MagicBento from "./MagicBento.jsx";
+import YouTubeTrailer from "./YouTubeTrailer.jsx";
 import { useSceneMotion } from "./useSceneMotion.js";
 import { useMotionPreference } from "./useMotionPreference.js";
 import { useOrbitMotion } from "./useOrbitMotion.js";
@@ -653,6 +654,19 @@ function App() {
             </span>
             <h2 id="dialog-title">{selected.title}</h2>
             <p className="case-summary">{selected.summary}</p>
+            {selected.media
+              .filter((m) => m.type === "youtube")
+              .map((m) => (
+                <figure className="case-trailer" key={m.id}>
+                  <YouTubeTrailer
+                    videoId={m.videoId}
+                    poster={m.poster}
+                    title={`${selected.title} — ${lang === "en" ? "Trailer" : "预告片"}`}
+                    language={lang}
+                  />
+                  <figcaption>{m.caption}</figcaption>
+                </figure>
+              ))}
             {selected.cover && (
               <figure className="case-cover">
                 <img src={selected.cover} alt={selected.coverCaption} />
@@ -683,26 +697,28 @@ function App() {
                 ))}
               </section>
             ))}
-            {selected.media.length > 0 && (
+            {selected.media.some((m) => m.type !== "youtube") && (
               <div className="case-gallery">
-                {selected.media.map((m) => (
-                  <figure key={m.id}>
-                    {m.type === "video" ? (
-                      <video
-                        controls
-                        playsInline
-                        preload="none"
-                        poster={m.poster}
-                        aria-label={m.caption}
-                      >
-                        <source src={m.url} type="video/mp4" />
-                      </video>
-                    ) : (
-                      <img src={m.url} alt={m.caption} loading="lazy" />
-                    )}
-                    <figcaption>{m.caption}</figcaption>
-                  </figure>
-                ))}
+                {selected.media
+                  .filter((m) => m.type !== "youtube")
+                  .map((m) => (
+                    <figure key={m.id}>
+                      {m.type === "video" ? (
+                        <video
+                          controls
+                          playsInline
+                          preload="none"
+                          poster={m.poster}
+                          aria-label={m.caption}
+                        >
+                          <source src={m.url} type="video/mp4" />
+                        </video>
+                      ) : (
+                        <img src={m.url} alt={m.caption} loading="lazy" />
+                      )}
+                      <figcaption>{m.caption}</figcaption>
+                    </figure>
+                  ))}
               </div>
             )}
             {selected.document && (

@@ -289,7 +289,15 @@
         "body": "I contributed as an artist. The linked project contains full team credits; the image here represents the team game. Individual asset documentation will distinguish my work from the wider production.\n\nThe supplied résumé additionally documents attack VFX, movement trails, elemental impacts, 70+ playtesters and five major build iterations."
       }
     ],
-    "media": [],
+    "media": [
+      {
+        "id": "trailer",
+        "type": "youtube",
+        "videoId": "XJG6Q_G4QKY",
+        "poster": "/assets/sisters.webp",
+        "caption": "Two Sisters team trailer — YouTube link supplied by Kangcheng Yuan."
+      }
+    ],
     "zh": {
       "category": "游戏美术",
       "summary": "团队动作 RPG 中的特效与视觉制作。",
@@ -304,7 +312,15 @@
           "body": "整合包将我列为 Artist；简历补充了 Unity 攻击特效、运动拖尾与元素技能反馈的制作，以及玩法与视觉方向设计。\n\n组织 70+ 玩家测试并完成五次主要迭代。完整团队名单见项目链接；单独资产拆解将后续补充。"
         }
       ],
-      "media": []
+      "media": [
+        {
+          "id": "trailer",
+          "type": "youtube",
+          "videoId": "XJG6Q_G4QKY",
+          "poster": "/assets/sisters.webp",
+          "caption": "Two Sisters 团队预告片，链接由袁康成提供。"
+        }
+      ]
     }
   },
   {
