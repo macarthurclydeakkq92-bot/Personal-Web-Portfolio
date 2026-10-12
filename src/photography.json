@@ -46,5 +46,29 @@
     "height": 608,
     "caption": { "en": "Sunset through the trees", "zh": "树影之间的日落" },
     "alt": { "en": "The setting sun shining through foliage above a wide view of the city.", "zh": "夕阳穿过树叶，下方是开阔的城市景色。" }
+  },
+  {
+    "id": "snapshot-01",
+    "src": "/assets/photography/snapshot-01.webp",
+    "width": 2400,
+    "height": 1600,
+    "caption": { "en": "A squirrel along the way", "zh": "路过一只松鼠" },
+    "alt": { "en": "A squirrel resting on a bare branch beside a large tree trunk.", "zh": "一只松鼠停在粗大树干旁的光秃树枝上。" }
+  },
+  {
+    "id": "snapshot-02",
+    "src": "/assets/photography/snapshot-02.webp",
+    "width": 2400,
+    "height": 1600,
+    "caption": { "en": "Blossoms overhead", "zh": "枝头的花" },
+    "alt": { "en": "Pale spring blossoms covering interwoven branches, with green foliage behind them.", "zh": "交错枝条上开满浅色花朵，后方是绿色树叶。" }
+  },
+  {
+    "id": "snapshot-03",
+    "src": "/assets/photography/snapshot-03.webp",
+    "width": 2400,
+    "height": 3600,
+    "caption": { "en": "Between the buildings", "zh": "楼宇之间" },
+    "alt": { "en": "A vertical view down a wet city street lined with tall brick buildings, cars and a glowing horizon.", "zh": "竖幅城市街景，湿润路面、车辆和两侧高耸的砖楼，远处天际泛着亮光。" }
   }
 ]
