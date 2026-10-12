@@ -46,3 +46,5 @@ The uploaded environment-art final, technical PDF, fracture render and solver-mo
 ## Display typography and identity
 
 Public identity is KANGCHENG YUAN, with a KY favicon and no registered-trademark symbol. Rajdhani Latin 500/600/700 is bundled locally through `@fontsource/rajdhani` for an angular anime/mecha display treatment. Body and Chinese text retain readable system fallbacks. Font license is in `docs/fonts/Rajdhani-LICENSE.txt`.
+
+Conduit also includes the supplied approximately 40-second gameplay capture. Its 854×480 framing and game audio are retained in a 30fps H.264/AAC faststart web encode (~9.5 MB), loaded only on explicit playback. The new gameplay poster is used in the project card, project shortcut and hero circle. Original archive imagery remains retained. Provenance and encoding details: `docs/conduit-gameplay-media.json`.

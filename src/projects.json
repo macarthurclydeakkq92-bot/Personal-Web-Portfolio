@@ -5,8 +5,8 @@
     "category": "Real-time VFX",
     "status": "Selected",
     "visible": true,
-    "cover": "/assets/conduit-01.webp",
-    "coverCaption": "Team gameplay. My contributions are described below.",
+    "cover": "/assets/conduit-gameplay.webp",
+    "coverCaption": "Frame from the supplied Conduit gameplay capture. Team production; personal contributions are detailed below.",
     "summary": "Combat effects and environmental assets for a hostile, unfamiliar world.",
     "role": "Attack & hit VFX · Environment props Localization · Playtest coordination",
     "tools": "Unity · Maya · Substance Painter",
@@ -35,14 +35,22 @@
         "body": "Conduit was created as an RPI Games and Simulation Arts and Sciences capstone project. My role was part of the art team, alongside contributors working across design, programming, art, and audio.\n\nGame overview, release information, and public media:  official Steam page ."
       }
     ],
-    "media": [],
+    "media": [
+      {
+        "id": "gameplay",
+        "type": "video",
+        "url": "/assets/videos/conduit-gameplay.mp4",
+        "poster": "/assets/conduit-gameplay.webp",
+        "caption": "Conduit gameplay capture — exploration and combat, approximately 40 seconds. Original 480p framing and game audio retained; optimized 30fps web encode."
+      }
+    ],
     "zh": {
       "category": "实时特效",
       "summary": "为陌生而充满敌意的世界，制作战斗特效与环境资产。",
       "role": "攻击与受击特效 · 场景道具 · 中文本地化 · 测试协调",
       "period": "2026 年 1–4 月",
       "context": "RPI · 团队项目",
-      "coverCaption": "团队游戏画面，个人贡献详见下方说明。",
+      "coverCaption": "从上传的 Conduit 实机录屏提取的画面；游戏由团队共同制作，个人贡献详见下方。",
       "sections": [
         {
           "title": "穿行于异星景观",
@@ -61,7 +69,15 @@
           "body": "项目属于 RPI Games and Simulation Arts and Sciences 毕业设计，由设计、程序、美术与音频成员共同完成。完整信息与公开素材请查看 Steam 页面。"
         }
       ],
-      "media": []
+      "media": [
+        {
+          "id": "gameplay",
+          "type": "video",
+          "url": "/assets/videos/conduit-gameplay.mp4",
+          "poster": "/assets/conduit-gameplay.webp",
+          "caption": "Conduit 实机录屏：场景探索与战斗，约 40 秒。保留原始 480p 构图与游戏音频，网页版本优化为 30fps。"
+        }
+      ]
     }
   },
   {

@@ -1,0 +1,12 @@
+{
+  "source": "User-uploaded 序列 01_4.mp4",
+  "source_bytes": 22989606,
+  "source_sha256": "d7b53463fa0b888943dc91200d3ade84df070d7ce4d37c7977f538216e6e7748",
+  "duration_seconds": 39.95,
+  "source_resolution": "854x480",
+  "web_video": "/assets/videos/conduit-gameplay.mp4",
+  "web_bytes": 9453271,
+  "encoding": "H.264 CRF 23, 30fps, AAC 96kbps, faststart; full duration and original framing retained",
+  "poster_timestamp_seconds": 35,
+  "attribution": "Team gameplay; individual VFX, environment and localization contributions are described separately."
+}

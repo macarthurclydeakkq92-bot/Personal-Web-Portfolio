@@ -328,7 +328,7 @@ function App() {
             </div>
             <div className="radar-ticks" />
             <div className="radar-landscape">
-              <img src="/assets/conduit-01.webp" alt="" />
+              <img src="/assets/conduit-gameplay.webp" alt="" />
               <div className="radar-contours" />
               <div className="radar-sweep" />
             </div>
