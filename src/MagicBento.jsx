@@ -203,7 +203,7 @@ const ParticleCard = ({
       if (enableTilt) {
         gsap.to(element, {
           overwrite: "auto",
-          y: -10,
+          y: -4,
           duration: 0.3,
           ease: "power2.out",
           transformPerspective: 1000,
@@ -248,22 +248,22 @@ const ParticleCard = ({
       const centerY = rect.height / 2;
 
       if (enableTilt) {
-        const rotateX = ((y - centerY) / centerY) * -5;
-        const rotateY = ((x - centerX) / centerX) * 5;
+        const rotateX = ((y - centerY) / centerY) * -2;
+        const rotateY = ((x - centerX) / centerX) * 2;
 
         gsap.to(element, {
           overwrite: "auto",
           rotateX,
           rotateY,
-          duration: 0.1,
+          duration: 0.22,
           ease: "power2.out",
           transformPerspective: 1000,
         });
       }
 
       if (enableMagnetism) {
-        const magnetX = Math.max(-5, Math.min(5, (x - centerX) * 0.05));
-        const magnetY = Math.max(-5, Math.min(5, (y - centerY) * 0.05)) - 10;
+        const magnetX = Math.max(-1.5, Math.min(1.5, (x - centerX) * 0.02));
+        const magnetY = Math.max(-1.5, Math.min(1.5, (y - centerY) * 0.02)) - 4;
 
         magnetismAnimationRef.current = gsap.to(element, {
           overwrite: "auto",

@@ -3,7 +3,6 @@ import { useEffect } from "react";
 // Pointer-driven transforms stay outside React rendering and never change layout.
 export function useGlassTilt(enabled = true) {
   useEffect(() => {
-    if (!enabled) return;
     const pointer = window.matchMedia(
       "(any-hover: hover) and (any-pointer: fine)",
     );
@@ -12,6 +11,8 @@ export function useGlassTilt(enabled = true) {
         ".project, .skill, .operator, .index-project, .field-nav > a, .contact-pill, .index-all, .language",
       ),
     ].filter((element) => !element.classList.contains("magic-bento-card"));
+    elements.forEach((element) => element.classList.add("glass-tilt"));
+    if (!enabled) return;
     const resets = [];
     const cleanups = elements.map((element) => {
       element.classList.add("glass-tilt");
@@ -43,7 +44,7 @@ export function useGlassTilt(enabled = true) {
             0,
             Math.min(1, (position.y - bounds.top) / bounds.height),
           );
-          const angle = element.matches(".project") ? 3 : 5;
+          const angle = element.matches(".language, .contact-pill") ? 0.8 : 1.6;
           element.style.setProperty(
             "--tilt-x",
             `${((0.5 - y) * angle * 2).toFixed(2)}deg`,
@@ -63,7 +64,6 @@ export function useGlassTilt(enabled = true) {
       element.addEventListener("blur", reset, true);
       return () => {
         reset();
-        element.classList.remove("glass-tilt");
         element.removeEventListener("pointerenter", move);
         element.removeEventListener("pointermove", move);
         element.removeEventListener("pointerleave", reset);

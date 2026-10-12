@@ -18,7 +18,7 @@ The direct registry endpoint returned HTTP 403 through the environment proxy. Th
 - The requested configuration is shared in `src/main.jsx`; glow is `220, 231, 147` to match the site's existing accent, rather than purple.
 - Styles are scoped, and demo geometry applies only to the standalone sample. Original glass framing stays in place.
 - Text auto-hide clamps summaries to two lines; complete text remains in project dialogs.
-- Tilt is limited to 5 degrees and magnetic movement to 5px with a 10px upward hover lift for comfortable use on wide image cards.
+- Tilt is limited to 2 degrees and magnetic movement to 1.5px with a 4px upward hover lift for comfortable use on wide image cards.
 - Decorative effects are clipped within an aria-hidden card layer; border glow uses its separate pseudo-element. The document spotlight sits below native dialogs.
 - The shared FX setting controls animation: ON explicitly enables it, AUTO respects system reduced-motion, OFF disables it. Devices without any hover-capable fine pointer stay static regardless of FX setting. GSAP tweens, generated nodes, timeouts and listeners are cleaned up; scrolling and window blur reset effects.
 - The older glass tilt hook skips MagicBento cards so two animation systems do not write the same transform.
