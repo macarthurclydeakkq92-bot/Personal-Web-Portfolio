@@ -6,6 +6,7 @@ import "@fontsource/rajdhani/latin-700.css";
 import "./style.css";
 import { heroVideo } from "./site.js";
 import projectArchive from "./projects.json";
+import photographs from "./photography.json";
 import { useGlassTilt } from "./useGlassTilt.js";
 import MagicBento from "./MagicBento.jsx";
 import YouTubeTrailer from "./YouTubeTrailer.jsx";
@@ -28,54 +29,67 @@ const copy = {
   en: {
     nav: ["About", "Selected work", "Approach"],
     contact: "Let’s talk",
-    role: "GAME VFX / VISUAL DESIGN / INTERACTION",
+    role: "REAL-TIME VFX / TECHNICAL ART / PLAYER EXPERIENCE",
     title: ["Imagined worlds,", "brought to life."],
     intro:
-      "Kangcheng Yuan — creating game effects, visual worlds and interactive experiences.",
+      "Kangcheng Yuan — exploring how visual feedback connects game mechanics and player understanding.",
     explore: "Explore selected work",
     scroll: "SCROLL TO EXPLORE",
-    about: "A little about me",
-    aboutTitle: "Between imagination\nand experience.",
-    bio: "I’m Kangcheng Yuan, a Game and Interactive Media Design student at Rensselaer Polytechnic Institute. From a VFX internship at Black Jack Studio (Zilong Game) to independent Unity and Unreal projects, I create real-time effects, environments and interactions that bring game worlds to life.",
+    about: "Practice & direction",
+    aboutTitle: "From visual effects\nto player understanding.",
+    bio: "I’m Kangcheng Yuan, a Game and Interactive Media Design student at Rensselaer Polytechnic Institute. Working across game design, environment art and real-time VFX has led me to a central question: how can visual feedback help players understand an action, read a threat and make a decision?",
+    researchLabel: "Graduate direction",
+    researchGoals:
+      "I want to connect artistic decisions with a deeper understanding of shaders, GPU rendering and performance. Through graduate study, I hope to develop clearer visual feedback and evaluate it through player-centered testing.",
+    interests: "Beyond the screen",
+    interestsTitle: "Photography,\nand the habit of looking.",
+    interestsIntro:
+      "A space for photography and visual observations: light, composition and details from everyday life.",
+    photoPending: "Photography collection coming soon",
+    photoThemes: [
+      "Light & atmosphere",
+      "Composition & space",
+      "Details & observation",
+    ],
     note: "Unity Particle System · Unreal Niagara · Maya · ZBrush · Substance Painter · Houdini",
     stats: [
       "Conduit Steam wishlists",
       "Two Sisters playtesters",
       "Wands and Tomes cards",
     ],
-    work: "Selected explorations",
-    workTitle: "A feeling. A world.\nA moment that stays.",
+    work: "Selected projects",
+    workTitle: "Making, testing,\nand asking why.",
     workNote:
-      "Selected game worlds, real-time effects and interactive studies.",
-    approach: "What I bring",
-    approachTitle: "Ideas with atmosphere.\nDetails with intent.",
+      "Personal contributions, design decisions and reflections across team games and individual studies.",
+    approach: "Questions I work with",
+    approachTitle: "Visual intention.\nTechnical curiosity.",
     skills: [
       [
         "01",
-        "Motion with meaning",
-        "Unity particles and Unreal Niagara effects for attacks, abilities and environmental feedback.",
+        "How does feedback read?",
+        "I explore how timing, scale and color communicate attacks, impact and interaction. My practical experience includes Unity particles and Unreal Niagara.",
         "GAME VFX",
       ],
       [
         "02",
-        "A coherent visual world",
-        "Maya and ZBrush environments, Substance Painter PBR materials and a cohesive sense of art direction.",
-        "VISUAL DESIGN",
+        "How is an effect built?",
+        "Graduate study will help me deepen material and shader mathematics, real-time rendering and performance analysis, building on my engine and asset-production experience.",
+        "TECHNICAL ART",
       ],
       [
         "03",
-        "Interaction with feeling",
-        "Game mechanics, balance and player feedback refined through hands-on playtesting.",
-        "INTERACTION",
+        "What do players reveal?",
+        "Playtests in Wands and Tomes showed me how a flexible card pattern could undermine its intended cost. I use player observations to question assumptions and refine a system.",
+        "PLAYER EXPERIENCE",
       ],
     ],
-    end: "HAVE SOMETHING IN MIND?",
-    endTitle: ["Let’s make", "something felt."],
+    end: "CONTINUING THE EXPLORATION",
+    endTitle: ["Let’s explore", "what comes next."],
     endText:
-      "Open to conversations about game worlds, visual identities and interactive experiences.",
+      "I’m preparing for graduate study in game development, technical art and interaction design. I welcome research conversations and selected studio collaborations.",
     pending: "Contact details coming soon",
     top: "Back to top",
-    copyright: "Independent portfolio / Work in progress",
+    copyright: "Selected work & visual studies",
     preview: "PROJECT PREVIEW",
     close: "Close",
     detail:
@@ -86,48 +100,58 @@ const copy = {
   zh: {
     nav: ["关于我", "精选作品", "创作优势"],
     contact: "联系我",
-    role: "游戏特效 / 视觉设计 / 交互设计",
+    role: "实时特效 / 技术美术 / 玩家体验",
     title: ["构筑想象，", "赋予世界生命。"],
-    intro: "袁康成 — 以游戏特效、视觉设计与交互，构建富有感知的世界。",
+    intro: "袁康成 — 探索视觉反馈如何连接游戏机制与玩家理解。",
     explore: "探索精选作品",
     scroll: "向下探索",
-    about: "关于我",
-    aboutTitle: "在想象与体验\n之间创作。",
-    bio: "我是袁康成，就读于伦斯勒理工学院游戏与交互媒体设计专业。从紫龙游戏 Black Jack Studio 的特效实习，到 Unity 与 Unreal 团队项目，我通过实时特效、场景美术和交互设计，让游戏世界鲜活起来。",
+    about: "创作实践与方向",
+    aboutTitle: "从视觉效果，\n走向玩家理解。",
+    bio: "我是袁康成，就读于伦斯勒理工学院游戏与交互媒体设计专业。在游戏设计、场景美术与实时特效的交叉实践中，我逐渐关注一个核心问题：视觉反馈如何帮助玩家理解动作、辨认威胁，并作出决定？",
+    researchLabel: "研究生学习方向",
+    researchGoals:
+      "我希望把艺术判断与着色器、GPU 渲染和性能分析的系统理解相连接，通过研究生学习设计更清晰的视觉反馈，并在以玩家为中心的测试中检验它。",
+    interests: "屏幕之外",
+    interestsTitle: "摄影，\n与观看的习惯。",
+    interestsIntro:
+      "这里将记录摄影与日常视觉观察：光线、构图，以及生活中的细节。",
+    photoPending: "摄影作品待补充",
+    photoThemes: ["光线与氛围", "构图与空间", "细节与观察"],
     note: "Unity 粒子系统 · Unreal Niagara · Maya · ZBrush · Substance Painter · Houdini",
     stats: [
       "Conduit Steam 愿望单",
       "Two Sisters 测试玩家",
       "Wands and Tomes 卡牌",
     ],
-    work: "精选探索",
-    workTitle: "一种感受，一个世界。\n一个值得停留的瞬间。",
-    workNote: "游戏世界、实时特效与交互探索。",
-    approach: "创作优势",
-    approachTitle: "让想法拥有氛围，\n让细节带着意图。",
+    work: "精选项目",
+    workTitle: "制作、测试，\n并追问原因。",
+    workNote: "通过团队游戏与个人实验，展示个人贡献、设计决策与创作反思。",
+    approach: "我关注的问题",
+    approachTitle: "视觉意图，\n与技术好奇心。",
     skills: [
       [
         "01",
-        "有意义的动态",
-        "使用 Unity 粒子系统与 Unreal Niagara，塑造攻击、技能和环境反馈。",
+        "玩家如何读懂反馈？",
+        "探索时序、尺度与色彩如何传达攻击、受击和交互信息。我的实践包括 Unity 粒子系统与 Unreal Niagara。",
         "游戏特效",
       ],
       [
         "02",
-        "统一的视觉世界",
-        "结合 Maya、ZBrush 场景制作与 Substance Painter PBR 材质，构建统一视觉语言。",
-        "视觉设计",
+        "效果如何被构建？",
+        "希望通过研究生学习深化材质与着色器数学、实时渲染和性能分析，在已有引擎与资产制作经验上建立更系统的技术理解。",
+        "技术美术",
       ],
       [
         "03",
-        "有温度的交互",
-        "从玩法机制与数值设计出发，通过玩家测试不断打磨交互反馈与体验。",
-        "交互设计",
+        "玩家测试揭示了什么？",
+        "Wands and Tomes 的测试让我发现，灵活的卡牌图案可能破坏预期的成本约束。我通过玩家行为检验假设，并持续改进系统。",
+        "玩家体验",
       ],
     ],
-    end: "有一个想法，想一起实现？",
-    endTitle: ["一起创造，", "能被感受到的作品。"],
-    endText: "期待关于游戏世界、视觉语言与交互体验的交流。",
+    end: "继续探索",
+    endTitle: ["一起探索，", "下一种可能。"],
+    endText:
+      "我正在准备游戏开发、技术美术与交互设计方向的研究生申请，也期待研究交流与合适的工作室合作。",
     pending: "联系方式待补充",
     top: "回到顶部",
     copyright: "个人作品集 / 持续完善中",
@@ -270,7 +294,7 @@ function App() {
           <span>KANGCHENG</span>
           <span>YUAN</span>
         </a>
-        <span className="nav-caption">INDEPENDENT CREATIVE / 袁康成</span>
+        <span className="nav-caption">REAL-TIME VFX / 袁康成</span>
         <div className="nav-actions">
           <select
             className="motion-control"
@@ -364,7 +388,7 @@ function App() {
                 {t.role}
               </div>
               <div className="hero-index">
-                PORTFOLIO / VOL. 01 <span>2026</span>
+                GRADUATE PORTFOLIO <span>FALL 2027</span>
               </div>
               <MotionHeading as="h1" lines={t.title} accent />
               <p className="hero-intro">{t.intro}</p>
@@ -470,6 +494,10 @@ function App() {
             <div className="about-copy">
               <MotionHeading lines={t.aboutTitle} />
               <p className="body-copy">{t.bio}</p>
+              <div className="graduate-focus">
+                <span>{t.researchLabel}</span>
+                <p>{t.researchGoals}</p>
+              </div>
               <p className="placeholder-note">{t.note}</p>
               <a className="text-link" href="#contact">
                 {t.contact}
@@ -608,6 +636,61 @@ function App() {
               ))}
             </MagicBento>
           </div>
+        </section>
+        <section className="interests section wrap" id="interests">
+          <div className="section-label">
+            <span>04 /</span>
+            {t.interests}
+          </div>
+          <div className="section-heading">
+            <MotionHeading lines={t.interestsTitle} />
+            <p className="interests-intro">{t.interestsIntro}</p>
+          </div>
+          <MagicBento
+            {...magicEffects}
+            disableAnimations={!motion.enabled}
+            className="interest-grid"
+          >
+            {(photographs.length ? photographs : [null, null, null]).map(
+              (photo, i) => (
+                <figure className="photography-card" key={photo?.id || i}>
+                  <div className="photograph-frame">
+                    {photo ? (
+                      <a
+                        href={photo.src}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src={photo.src}
+                          alt={photo.alt?.[lang] || photo.alt?.en || ""}
+                          loading="lazy"
+                          width={photo.width}
+                          height={photo.height}
+                        />
+                      </a>
+                    ) : (
+                      <div className={`photo-empty photo-empty-${i}`}>
+                        <span className="photo-frame-mark" aria-hidden="true" />
+                        <span className="photo-empty-caption">
+                          {t.photoPending}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                  <figcaption>
+                    <span>0{i + 1} /</span>
+                    <strong>
+                      {photo
+                        ? photo.caption?.[lang] || photo.caption?.en
+                        : t.photoThemes[i]}
+                    </strong>
+                    {photo?.location && <small>{photo.location}</small>}
+                  </figcaption>
+                </figure>
+              ),
+            )}
+          </MagicBento>
         </section>
         <section className="contact section" id="contact">
           <div className="contact-glow" />

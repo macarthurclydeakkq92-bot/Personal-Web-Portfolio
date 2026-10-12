@@ -33,6 +33,11 @@
         "id": "conduit-3",
         "title": "Animated Anomalies.",
         "body": "Conduit was created as an RPI Games and Simulation Arts and Sciences capstone project. My role was part of the art team, alongside contributors working across design, programming, art, and audio.\n\nGame overview, release information, and public media:  official Steam page ."
+      },
+      {
+        "id": "graduate-question",
+        "title": "A question to carry forward",
+        "body": "How can the timing and scale of attack and hit effects make an interaction easier to read? This is a question I want to investigate further through isolated effect breakdowns, comparisons between iterations and focused player observations. It describes a direction for future study, rather than a completed controlled evaluation."
       }
     ],
     "media": [
@@ -67,6 +72,10 @@
         {
           "title": "团队协作",
           "body": "项目属于 RPI Games and Simulation Arts and Sciences 毕业设计，由设计、程序、美术与音频成员共同完成。完整信息与公开素材请查看 Steam 页面。"
+        },
+        {
+          "title": "希望继续研究的问题",
+          "body": "攻击与受击特效的时序和尺度，如何让交互更容易被理解？我希望通过独立特效拆解、版本比较和有针对性的玩家观察继续研究。这里描述的是下一步学习方向，并不代表已经完成受控实验。"
         }
       ],
       "media": [
@@ -332,7 +341,7 @@
     "cover": "/assets/karkinos.webp",
     "coverCaption": "Team-game image. My individual contributions are described below.",
     "summary": "An underwater adventure about a player cursed into a crab, collecting magical objects to lift the curse.",
-    "role": "Art team · Environment and interaction effects",
+    "role": "Environment art · Gameplay / level design · Niagara VFX",
     "tools": "Unreal Engine · Niagara · Maya · Substance Painter",
     "period": "",
     "context": "Team project",
@@ -347,13 +356,18 @@
         "id": "karkinos-ascension1",
         "title": "Showing my work",
         "body": "Isolated coral assets, material views, and Niagara captures will be added to document the specific pieces I made. The current cover is a team-game image."
+      },
+      {
+        "id": "reflection",
+        "title": "Feedback as part of the system",
+        "body": "Working across gameplay, environments and Niagara effects helped me think about visual feedback from the player’s perspective: how scale can communicate threat and how a highlight can make an interactive object noticeable.\n\nThe project also exposed a gap in my understanding of shader mathematics and GPU rendering. I want to develop those foundations so that performance and visual decisions can be reasoned about systematically, alongside player-centered testing."
       }
     ],
     "media": [],
     "zh": {
       "category": "游戏美术 / 交互特效",
       "summary": "在海底冒险中收集魔法物品，解除变为螃蟹的诅咒。",
-      "role": "美术团队 · 场景与交互特效",
+      "role": "场景美术 · 玩法与关卡设计 · Niagara 特效",
       "context": "团队项目",
       "coverCaption": "团队游戏画面，个人贡献详见下方说明。",
       "sections": [
@@ -364,6 +378,10 @@
         {
           "title": "个人作品拆解",
           "body": "后续将补充独立珊瑚资产、材质视图和 Niagara 录制，明确展示个人完成的内容。当前封面为团队游戏图片。"
+        },
+        {
+          "title": "把反馈纳入系统",
+          "body": "在玩法、场景与 Niagara 特效的交叉实践中，我开始从玩家视角思考视觉反馈：尺度如何表达威胁，高光如何让可交互物体更容易被注意到。\n\n项目也让我认识到自己在着色器数学与 GPU 渲染理解上的不足。我希望进一步建立这些基础，把性能与视觉决策放进系统分析，并结合以玩家为中心的测试。"
         }
       ],
       "media": []

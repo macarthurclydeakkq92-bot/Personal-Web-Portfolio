@@ -54,3 +54,24 @@ Two Sisters includes the user-supplied YouTube trailer (`XJG6Q_G4QKY`). Its loca
 Project media placement is consistent: cover, then all presentation videos (local MP4 or YouTube), then role facts and case-study sections. Process-image galleries remain after the sections. This applies automatically to future projects through the shared `case-videos` render path.
 
 Fast scrolling or jumping to the footer completes pending entrances already passed or currently in view. The opening can be skipped even before its timeline has started ticking. A passive scroll listener batches checks into one animation frame; ordinary slower scrolling retains the cinematic sequences. Desktop and mobile initial jumps to the bottom were verified for immediate visible headings/cards and usable project buttons on return.
+
+## Graduate-application direction and photography
+
+The site is primarily a graduate portfolio for Fall 2027. Public copy connects real-time VFX, player perception, playtesting and future study of shaders/rendering/performance; it does not present those learning goals as completed research or established expertise. The internship remains July–August 2025, confirmed by the owner. Uploaded SOP and school-selection files are not published in this repository.
+
+The `#interests` section precedes the final contact page. `src/photography.json` is initially empty, and all three visible slots explicitly say that photography is coming soon. To add actual photography, place optimized images under `public/assets/photography/` and add entries with `id`, `src`, `width`, `height`, bilingual `alt` and bilingual `caption`; `location` is optional. The empty state is automatically replaced with supplied images. Do not publish sample images as personal photography.
+
+Example entry shape (replace all placeholders with actual details):
+
+```json
+{
+  "id": "photo-01",
+  "src": "/assets/photography/photo-01.webp",
+  "width": 1200,
+  "height": 1600,
+  "alt": {"en": "Description of the actual photograph", "zh": "照片的真实内容描述"},
+  "caption": {"en": "Photograph title", "zh": "照片标题"}
+}
+```
+
+School-specific submission requirements need separate official verification. The website's existence and technical validation do not prove that every program accepts a URL instead of prescribed files or creative tasks.

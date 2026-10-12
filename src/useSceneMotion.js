@@ -213,7 +213,7 @@ export function useSceneMotion(language, enabled) {
               },
               0.25,
             );
-          const cards = section.querySelectorAll(".project, .skill");
+          const cards = section.querySelectorAll(".project, .skill, .photography-card");
           cards.forEach((card, i) => {
             // Each row has its own viewport trigger; later work is never revealed far offscreen.
             const grid =

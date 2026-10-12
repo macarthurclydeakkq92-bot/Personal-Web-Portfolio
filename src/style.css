@@ -2577,3 +2577,136 @@ html[lang="en"] .motion-heading .motion-word {
     font-size: 10px;
   }
 }
+.graduate-focus {
+  margin: 25px 0 22px;
+  padding: 18px 20px;
+  border-left: 2px solid #dce79366;
+  background: #dce79306;
+}
+.graduate-focus > span {
+  font:
+    600 12px "Rajdhani",
+    "Microsoft YaHei",
+    sans-serif;
+  letter-spacing: 1px;
+  color: #c8d9a4;
+}
+.graduate-focus > p {
+  color: #a9b6a4;
+  font-size: 13px;
+  line-height: 1.85;
+  margin-top: 10px;
+}
+#approach .magic-bento-card--text-autohide.skill > p {
+  display: block;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+}
+.interests {
+  border-bottom: 1px solid #283228;
+}
+.interests-intro {
+  max-width: 340px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.photography-card {
+  margin: 0;
+  padding: 10px;
+  border-radius: 3px;
+}
+.photograph-frame {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #18231d;
+}
+.photograph-frame a {
+  display: block;
+  height: 100%;
+}
+.photograph-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.photo-empty {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(155deg, #a7bd7830, #101c1600 45%), #17221b;
+}
+.photo-empty-1 {
+  background: linear-gradient(45deg, #96aca320, #14201b00 55%), #17201d;
+}
+.photo-empty-2 {
+  background:
+    radial-gradient(ellipse at 68% 25%, #a4b07825, transparent 60%), #18221a;
+}
+.photo-frame-mark {
+  width: 42%;
+  height: 35%;
+  border: 1px solid #bdcf9d40;
+  outline: 1px solid #bdcf9d10;
+  outline-offset: 10px;
+}
+.photo-frame-mark::after {
+  content: "+";
+  display: grid;
+  place-items: center;
+  height: 100%;
+  color: #a5b38d66;
+  font:
+    300 24px "Rajdhani",
+    sans-serif;
+}
+.photo-empty-caption {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #a3b092;
+}
+.photography-card figcaption {
+  display: flex;
+  gap: 15px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  padding: 8px 4px;
+}
+.photography-card figcaption > span {
+  color: #899e77;
+  font-size: 9px;
+}
+.photography-card figcaption strong {
+  font:
+    600 16px "Rajdhani",
+    "Microsoft YaHei",
+    sans-serif;
+  color: #d3dfc3;
+}
+.photography-card figcaption small {
+  width: 100%;
+  color: #899580;
+}
+@media (max-width: 600px) {
+  .interest-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .photograph-frame {
+    aspect-ratio: 4 / 3;
+  }
+  .graduate-focus {
+    padding: 16px;
+  }
+}
