@@ -584,8 +584,8 @@ function App() {
                     0{i + 1} /{" "}
                     {p.slug === "afterlight"
                       ? lang === "en"
-                        ? "PAUSED PROTOTYPE"
-                        : "已暂停的原型"
+                        ? "EXPERIMENTAL PROTOTYPE"
+                        : "实验性原型"
                       : p.category.toUpperCase()}
                   </span>
                   <span className="project-open">

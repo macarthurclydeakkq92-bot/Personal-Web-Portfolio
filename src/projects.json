@@ -465,78 +465,111 @@
   {
     "slug": "afterlight",
     "title": "Afterlight / 余光",
-    "category": "Interactive media",
-    "status": "In development",
+    "category": "Interactive installation / Memory",
+    "status": "Experimental prototype",
     "visible": true,
-    "cover": "",
-    "coverCaption": "",
-    "summary": "An interaction with projected light leads into a small cinema, where the player can sit and watch a film.",
-    "role": "Solo prototype · Interaction · Scene integration",
+    "cover": "/assets/afterlight-prototype.webp",
+    "coverCaption": "Still from the supplied Afterlight prototype recording: a commemorative film and a seat in the screening space.",
+    "summary": "An experimental memory installation for a live-performance community: illuminate a keepsake, take a seat, and revisit a shared summer.",
+    "role": "Interaction design · Unity prototyping · Scene integration",
     "tools": "Unity 2022.3",
-    "period": "2026",
-    "context": "Personal project",
+    "period": "2026–ongoing",
+    "context": "Community memory project · Experimental installation",
     "link": "",
     "sections": [
       {
-        "id": "afterlight0",
-        "title": "Light as an invitation",
-        "body": "The player begins from the projector viewpoint and aims light at an object. After the object has been illuminated long enough, control returns to a freely moving viewpoint. The player can then choose to sit and watch a film."
+        "id": "shared-summer",
+        "title": "Our first summer together",
+        "body": "Afterlight grew out of the North American Expedition Group (北美远征组), a community brought together by travelling between the United States and Japan to attend live performances. Our shared connection is chikage.\n\nAfter the group was formed, we spent our first summer together and created a commemorative video. This installation was conceived to accompany that remembrance: a place to return to the moments we shared."
       },
       {
-        "id": "afterlight1",
-        "title": "Current prototype",
-        "body": "The Unity prototype includes object illumination, the transition to free movement, a seated viewpoint, and video playback. These describe the current working direction; final visuals and playtest evidence are still to be documented."
+        "id": "light-and-memory",
+        "title": "Hold the light. Return to a moment.",
+        "body": "Guide a light onto a commemorative object and keep it there for a few seconds. The object becomes an entry point to its associated memory; the viewer can then walk to a seat and watch the corresponding film.\n\nThe supplied capture follows one happi coat through this interaction in an early Unity prototype. The pause while illuminating it, the move toward the chair, and the screening are part of the current experiment."
       },
       {
-        "id": "afterlight2",
-        "title": "Next documentation",
-        "body": "A short interaction recording, a final composition, a comparison of guidance and pacing, and a reflection will be added here. Production is currently paused."
+        "id": "growing-corridor",
+        "title": "A corridor we keep adding to",
+        "body": "The planned final form is a Web Build on the group’s official website, making the installation accessible directly in a browser. It is intended to be maintained over time.\n\nEach new formal group project will add a commemorative object and its video to the corridor. We hope that a single memory will gradually grow into a row of keepsakes—and eventually many more—each opening a different moment from our shared history."
+      },
+      {
+        "id": "open-collaboration",
+        "title": "An open experiment in remembrance",
+        "body": "The project welcomes contributors who want to help build this evolving place of memory, through interaction, visual production, technical implementation, or other creative skills.\n\nThe recording documents the first prototype. Expanding the corridor, adding further memories, and releasing the browser version are the next stages of development."
       }
     ],
     "media": [
       {
-        "id": "concept",
-        "url": "/assets/afterlight-concept.webp",
-        "caption": "Historical AI concept image — not gameplay or the current Unity prototype."
+        "id": "prototype-video",
+        "type": "video",
+        "url": "/assets/videos/afterlight-prototype.mp4",
+        "poster": "/assets/afterlight-prototype.webp",
+        "caption": "Early Afterlight prototype — approximately 19 seconds, showing illumination, movement toward the chair, and the commemorative screening."
       },
       {
-        "id": "progress",
-        "url": "/assets/afterlight-progress.webp",
-        "caption": "Historical UE5 BP_MemoryTarget screenshot — not the current Unity implementation."
+        "id": "illumination",
+        "type": "image",
+        "url": "/assets/process/afterlight-illumination.webp",
+        "caption": "Holding the light on a happi coat: the commemorative object acts as an entry point to the memory. Frame from the supplied prototype recording."
+      },
+      {
+        "id": "screening",
+        "type": "image",
+        "url": "/assets/process/afterlight-screening.webp",
+        "caption": "Watching the first summer’s commemorative film within the prototype. The film is a shared group work; this frame documents its presentation inside the installation."
       }
     ],
     "zh": {
-      "category": "交互媒体",
-      "summary": "以投射光线开启一段交互，走入小型影院，坐下观看影片。",
-      "role": "个人原型 · 交互 · 场景整合",
-      "period": "2026",
-      "context": "个人项目",
+      "category": "交互装置 / 回忆实验",
+      "summary": "为「北美远征组」共同度过的第一个夏天而制作的回忆装置：以光照亮纪念物，坐下重看一起留下的影像。",
+      "role": "交互设计 · Unity 原型 · 场景整合",
+      "period": "2026 年至今",
+      "context": "社群回忆项目 · 实验性交互装置",
       "sections": [
         {
-          "title": "以光作为邀请",
-          "body": "玩家从投影仪视角出发，用光照射物体。持续照射达到一定时间后，切换回自由移动视角，再选择坐下观看影片。"
+          "id": "shared-summer",
+          "title": "一起度过的第一个夏天",
+          "body": "Afterlight 的主角是「北美远征组」——一群经常往返美国与日本、为了看 live 而相聚的人。地下艺（chikage）与 live 文化是我们共同的连接。\n\n在组织成立后一起度过的第一个夏天，我们制作了一部纪念视频。这个装置为辅助这份纪念而生，让一起留下的影像有一个可以再次进入的空间。"
         },
         {
-          "title": "当前原型",
-          "body": "Unity 原型包含物体照射、自由移动切换、坐姿视角与视频播放。这些描述的是当前工作方向，最终画面与测试证据仍待整理。"
+          "id": "light-and-memory",
+          "title": "照亮一件纪念物，回到一个瞬间",
+          "body": "玩家将光照向一件纪念物，并保持几秒。物件成为进入相应回忆的入口，随后玩家可以走向座椅，坐下观看与它对应的纪念影片。\n\n这段初步 Unity 实机录屏展示了一件 happi 法被服饰的交互：持续照亮、走向椅子，再进入放映。光停留的时间和从探索到观看的转换，是当前实验的一部分。"
         },
         {
-          "title": "下一步记录",
-          "body": "后续补充交互录屏、最终构图、引导与节奏比较及反思。目前制作暂停。"
+          "id": "growing-corridor",
+          "title": "一条持续生长的回忆走廊",
+          "body": "最终计划以 Web Build 的形式发布在组织官网上，让所有人都能直接通过浏览器接触这个装置。项目会持续维护。\n\n之后每当有新的正式企划，就会把相应的纪念物与视频加入走廊。我们期待这里从一个回忆入口，逐渐长成一整排甚至更多的纪念物；用光照亮其中一个，就能重看与它相连的片段。"
+        },
+        {
+          "id": "open-collaboration",
+          "title": "欢迎一起参与这场回忆实验",
+          "body": "欢迎愿意贡献交互、视觉、技术实现或其他创作能力的朋友加入，一起让这个回忆空间继续生长。\n\n当前视频记录的是第一版原型。更长的走廊、更多纪念内容，以及浏览器版本的发布，都是后续开发方向。"
         }
       ],
       "media": [
         {
-          "id": "concept",
-          "url": "/assets/afterlight-concept.webp",
-          "caption": "历史 AI 概念图，非实机画面，也非当前 Unity 原型。"
+          "id": "prototype-video",
+          "type": "video",
+          "url": "/assets/videos/afterlight-prototype.mp4",
+          "poster": "/assets/afterlight-prototype.webp",
+          "caption": "Afterlight 初步实机录屏，约 19 秒：照亮纪念物、走向座椅与纪念影片放映。"
         },
         {
-          "id": "progress",
-          "url": "/assets/afterlight-progress.webp",
-          "caption": "历史 UE5 BP_MemoryTarget 截图，非当前 Unity 实现。"
+          "id": "illumination",
+          "type": "image",
+          "url": "/assets/process/afterlight-illumination.webp",
+          "caption": "持续照亮 happi 法被服饰，让纪念物成为进入回忆的入口；画面来自上传的原型实机录屏。"
+        },
+        {
+          "id": "screening",
+          "type": "image",
+          "url": "/assets/process/afterlight-screening.webp",
+          "caption": "在原型空间中重看第一个夏天的纪念影片。影片由团体共同制作，这里展示的是它在交互装置中的呈现。"
         }
-      ]
+      ],
+      "status": "实验性原型",
+      "coverCaption": "从上传的 Afterlight 初步实机录屏提取的画面：纪念影片与放映空间中的座椅。"
     }
   }
 ]

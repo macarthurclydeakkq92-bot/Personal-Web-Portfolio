@@ -8,5 +8,9 @@
   "wands-hero.webp": "https://img.itch.zone/aW1hZ2UvMzQ5MDQ4NS8yNTE2MDEzNy5wbmc=/original/WXmqeu.png",
   "wands-cards.webp": "https://img.itch.zone/aW1hZ2UvMzQ5MDQ4NS8yNTE2MDE1My5wbmc=/original/YX%2BR2b.png",
   "afterlight-concept.webp": "Existing Afterlight English presentation: AI concept image; not gameplay.",
-  "afterlight-progress.webp": "Existing Afterlight English presentation: user-provided UE5 screenshot of BP_MemoryTarget."
+  "afterlight-progress.webp": "Existing Afterlight English presentation: user-provided UE5 screenshot of BP_MemoryTarget.",
+  "afterlight-prototype.mp4": "User-uploaded 1.mp4, 18.95-second Unity prototype recording. Web encode: original 1280×720 framing, 30fps H.264/AAC, fast-start MP4. Source SHA-256: ebedf97f5b287bef053af4538356e2699caab63516a9a6f78440e4f660acc710.",
+  "afterlight-prototype.webp": "Frame at 7.5 seconds from user-uploaded 1.mp4: screening space and chair. Actual early prototype footage.",
+  "afterlight-illumination.webp": "Frame at 3 seconds from user-uploaded 1.mp4: light held on the happi keepsake.",
+  "afterlight-screening.webp": "Frame at 12 seconds from user-uploaded 1.mp4: group commemorative film inside the prototype."
 }

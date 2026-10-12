@@ -27,7 +27,7 @@ Domain attachment and DNS changes require access to your Cloudflare account and 
 
 ## Archive import
 
-Five public projects are integrated, with original English content and Simplified Chinese translations. Team imagery is captioned; Afterlight’s historical AI concept and UE5 screenshot are clearly distinguished from its current paused Unity prototype. Source provenance is retained in `docs/asset-sources.json`. The three hidden seed projects remain in `docs/archive-projects.json` and are not published as finished work. See `docs/archive-import.md` for details.
+Seven public projects are integrated with English content and Simplified Chinese translations. Team imagery is captioned. Afterlight now presents the supplied Unity prototype recording as an experimental memory installation for the North American Expedition Group (北美远征组); its community website Web Build and expanding corridor are future development plans. Its cover and process frames come from the actual recording, replacing the historical AI concept and UE5 screenshot in the public case. Source provenance is retained in `docs/asset-sources.json`. Original seed records remain in `docs/archive-projects.json`. See `docs/archive-import.md` for import history.
 
 ## Cinematic motion
 
