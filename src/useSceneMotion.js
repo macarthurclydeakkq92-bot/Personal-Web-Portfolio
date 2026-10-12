@@ -15,6 +15,7 @@ export function useSceneMotion(language, enabled) {
         const hero = document.querySelector(".hud-hero");
         const curtain = document.querySelector(".opening-curtain");
         const lines = hero.querySelectorAll(".motion-word");
+        const entrances = [];
         const revealCard = (card, timeline, at = 0, distance = 85) => {
           // Entrance moves an outer frame; MagicBento owns the inner card transform.
           card = card.closest(".scene-card-slot") || card;
@@ -179,6 +180,7 @@ export function useSceneMotion(language, enabled) {
               toggleActions: "play none none none",
             },
           });
+          entrances.push({ anchor: heading, timeline: titleTimeline });
           titleTimeline.fromTo(
             sectionLines,
             {
@@ -229,6 +231,10 @@ export function useSceneMotion(language, enabled) {
                 toggleActions: "play none none none",
               },
             });
+            entrances.push({
+              anchor: card.closest(".scene-card-slot") || card,
+              timeline: cardTimeline,
+            });
             revealCard(card, cardTimeline, 0.3 + staggerIndex * 0.22);
             const image = card.querySelector(".project-image");
             if (image)
@@ -253,6 +259,7 @@ export function useSceneMotion(language, enabled) {
                 toggleActions: "play none none none",
               },
             });
+            entrances.push({ anchor: portrait, timeline: portraitTimeline });
             revealCard(portrait, portraitTimeline, 0.35, 65);
           }
         });
@@ -278,15 +285,50 @@ export function useSceneMotion(language, enabled) {
             );
           });
         }
-        const skipOpening = () => {
-          if (opening?.isActive() && window.scrollY > 80) opening.progress(1);
+        // Fast navigation must show content, rather than queue masks offscreen.
+        let scrollFrame = 0;
+        let previousScroll = window.scrollY;
+        let previousTime = performance.now();
+        const settlePassedEntrances = (jumped = false) => {
+          const atBottom =
+            window.scrollY + window.innerHeight >=
+            document.documentElement.scrollHeight - 8;
+          entrances.forEach(({ anchor, timeline }) => {
+            if (timeline.progress() >= 1) return;
+            const bounds = anchor.getBoundingClientRect();
+            if (
+              bounds.bottom <= 0 ||
+              ((jumped || atBottom) && bounds.top < window.innerHeight)
+            ) {
+              timeline.progress(1);
+            }
+          });
         };
-        window.addEventListener("scroll", skipOpening, { passive: true });
-        const refreshFrame = requestAnimationFrame(() =>
-          ScrollTrigger.refresh(),
-        );
+        const handleScroll = () => {
+          // A timeline at time zero is not yet "active", but must still be dismissible.
+          if (opening && opening.progress() < 1 && window.scrollY > 80)
+            opening.progress(1);
+          if (scrollFrame) return;
+          scrollFrame = requestAnimationFrame(() => {
+            scrollFrame = 0;
+            const now = performance.now();
+            const delta = Math.abs(window.scrollY - previousScroll);
+            const speed = (delta / Math.max(16, now - previousTime)) * 1000;
+            settlePassedEntrances(
+              delta > window.innerHeight * 0.6 || speed > 2400,
+            );
+            previousScroll = window.scrollY;
+            previousTime = now;
+          });
+        };
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        const refreshFrame = requestAnimationFrame(() => {
+          ScrollTrigger.refresh();
+          settlePassedEntrances();
+        });
         return () => {
-          window.removeEventListener("scroll", skipOpening);
+          window.removeEventListener("scroll", handleScroll);
+          cancelAnimationFrame(scrollFrame);
           cancelAnimationFrame(refreshFrame);
         };
       });

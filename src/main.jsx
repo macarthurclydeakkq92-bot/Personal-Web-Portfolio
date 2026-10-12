@@ -654,24 +654,42 @@ function App() {
             </span>
             <h2 id="dialog-title">{selected.title}</h2>
             <p className="case-summary">{selected.summary}</p>
-            {selected.media
-              .filter((m) => m.type === "youtube")
-              .map((m) => (
-                <figure className="case-trailer" key={m.id}>
-                  <YouTubeTrailer
-                    videoId={m.videoId}
-                    poster={m.poster}
-                    title={`${selected.title} — ${lang === "en" ? "Trailer" : "预告片"}`}
-                    language={lang}
-                  />
-                  <figcaption>{m.caption}</figcaption>
-                </figure>
-              ))}
             {selected.cover && (
               <figure className="case-cover">
                 <img src={selected.cover} alt={selected.coverCaption} />
                 <figcaption>{selected.coverCaption}</figcaption>
               </figure>
+            )}
+            {selected.media.some(
+              (m) => m.type === "video" || m.type === "youtube",
+            ) && (
+              <div className="case-videos case-gallery">
+                {selected.media
+                  .filter((m) => m.type === "video" || m.type === "youtube")
+                  .map((m) => (
+                    <figure key={m.id}>
+                      {m.type === "youtube" ? (
+                        <YouTubeTrailer
+                          videoId={m.videoId}
+                          poster={m.poster}
+                          title={`${selected.title} — ${lang === "en" ? "Trailer" : "预告片"}`}
+                          language={lang}
+                        />
+                      ) : (
+                        <video
+                          controls
+                          playsInline
+                          preload="none"
+                          poster={m.poster}
+                          aria-label={m.caption}
+                        >
+                          <source src={m.url} type="video/mp4" />
+                        </video>
+                      )}
+                      <figcaption>{m.caption}</figcaption>
+                    </figure>
+                  ))}
+              </div>
             )}
             <dl className="case-facts">
               {[
@@ -697,25 +715,15 @@ function App() {
                 ))}
               </section>
             ))}
-            {selected.media.some((m) => m.type !== "youtube") && (
+            {selected.media.some(
+              (m) => m.type !== "youtube" && m.type !== "video",
+            ) && (
               <div className="case-gallery">
                 {selected.media
-                  .filter((m) => m.type !== "youtube")
+                  .filter((m) => m.type !== "youtube" && m.type !== "video")
                   .map((m) => (
                     <figure key={m.id}>
-                      {m.type === "video" ? (
-                        <video
-                          controls
-                          playsInline
-                          preload="none"
-                          poster={m.poster}
-                          aria-label={m.caption}
-                        >
-                          <source src={m.url} type="video/mp4" />
-                        </video>
-                      ) : (
-                        <img src={m.url} alt={m.caption} loading="lazy" />
-                      )}
+                      <img src={m.url} alt={m.caption} loading="lazy" />
                       <figcaption>{m.caption}</figcaption>
                     </figure>
                   ))}
