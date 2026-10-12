@@ -41,15 +41,15 @@ const copy = {
     researchLabel: "Graduate direction",
     researchGoals:
       "I want to connect artistic decisions with a deeper understanding of shaders, GPU rendering and performance. Through graduate study, I hope to develop clearer visual feedback and evaluate it through player-centered testing.",
-    interests: "Beyond the screen",
-    interestsTitle: "Photography,\nand the habit of looking.",
+    interests: "Off the clock",
+    interestsTitle: "A few moments,\nthrough my lens.",
     interestsIntro:
-      "A space for photography and visual observations: light, composition and details from everyday life.",
+      "Photography is one of my personal hobbies. A small space for places, everyday moments and things that catch my eye.",
     photoPending: "Photography collection coming soon",
     photoThemes: [
-      "Light & atmosphere",
-      "Composition & space",
-      "Details & observation",
+      "Personal snapshots",
+      "Places & small details",
+      "Everyday moments",
     ],
     note: "Unity Particle System · Unreal Niagara · Maya · ZBrush · Substance Painter · Houdini",
     stats: [
@@ -111,12 +111,12 @@ const copy = {
     researchLabel: "研究生学习方向",
     researchGoals:
       "我希望把艺术判断与着色器、GPU 渲染和性能分析的系统理解相连接，通过研究生学习设计更清晰的视觉反馈，并在以玩家为中心的测试中检验它。",
-    interests: "屏幕之外",
-    interestsTitle: "摄影，\n与观看的习惯。",
+    interests: "闲暇时光",
+    interestsTitle: "镜头里，\n留住一些日常。",
     interestsIntro:
-      "这里将记录摄影与日常视觉观察：光线、构图，以及生活中的细节。",
+      "摄影是我的个人爱好。这里会放一些喜欢的风景、路过的地方和日常瞬间。",
     photoPending: "摄影作品待补充",
-    photoThemes: ["光线与氛围", "构图与空间", "细节与观察"],
+    photoThemes: ["随手记录", "风景与小细节", "日常瞬间"],
     note: "Unity 粒子系统 · Unreal Niagara · Maya · ZBrush · Substance Painter · Houdini",
     stats: [
       "Conduit Steam 愿望单",
