@@ -22,3 +22,5 @@ Afterlight's public snapshot has no cover and documents a paused Unity 2022.3 pr
 The existing React + Vite site and Cloudflare Pages build contract are retained. The archive's legacy hosting adapters, editor/auth endpoints, and database-dependent implementation are not needed for this static portfolio. No archive scripts were executed. No deployment credentials were imported. Archive text is rendered as React text, never injected HTML.
 
 The hero's original SVG icons, circular image treatment, panel geometry and navigation reference the supplied game UI's visual organization. The game reference screenshot and logos are not used as website assets. Hero video support remains available through `src/site.js`; the archive contains no playable video file.
+
+Update 2026-10-12: the newly supplied original videos and environment-art PDF allow Coastal Shrine and Visual Studies (displayed as Procedural Motion) to appear publicly. The original hidden seed records remain as archive evidence, and current website data is in src/projects.json. New Project remains hidden.

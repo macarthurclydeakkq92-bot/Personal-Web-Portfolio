@@ -2116,3 +2116,139 @@ html[data-motion="off"] .glass-tilt {
     gap: 5px;
   }
 }
+/* Layered, rotating mechanical rings; only child rotors animate continuously. */
+.orbit-rotor {
+  display: block;
+  position: absolute;
+  inset: 0;
+  transform-origin: center;
+}
+.orbit-rotor svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.orbit-track {
+  stroke: #b9ca9338;
+  stroke-width: 0.3;
+}
+.orbit-segments {
+  stroke: #dce793b3;
+  stroke-width: 1.7;
+  stroke-dasharray: 130 48 15 25 92 70 28 25 38 28;
+}
+.orbit-point {
+  fill: #e5eeb2;
+}
+.orbit-inner .orbit-segments {
+  stroke-width: 0.6;
+  stroke: #d7e3b789;
+  stroke-dasharray: 22 13 65 25 7 40;
+}
+.orbit-bracket {
+  stroke: #e0e9c4;
+  stroke-width: 1.6;
+}
+.orbit-outer::after {
+  opacity: 0.2;
+}
+.radar-ticks {
+  position: absolute;
+  inset: 20px;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    #d5e1b377 0deg 1deg,
+    transparent 1deg 7.5deg
+  );
+  -webkit-mask: radial-gradient(
+    transparent 68%,
+    #000 68.2% 69%,
+    transparent 69.2%
+  );
+  mask: radial-gradient(transparent 68%, #000 68.2% 69%, transparent 69.2%);
+  pointer-events: none;
+}
+.radar-sweep {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from -30deg,
+    transparent 0deg 305deg,
+    #dce79302 320deg,
+    #dce79329 358deg,
+    transparent 360deg
+  );
+  pointer-events: none;
+}
+@media (min-width: 601px) {
+  .radar {
+    transform: translate(-30%, -50%) perspective(1500px) rotateY(-12deg)
+      rotateX(7deg);
+  }
+}
+/* A restrained extruded edge rather than a plastic or neon type treatment. */
+.motion-word {
+  text-shadow:
+    0 1px 0 #ffffff20,
+    1px 2px 0 #71806c60,
+    2px 3px 0 #41503f80,
+    3px 4px 0 #24332690,
+    0 10px 20px #050a0860;
+}
+h1 .motion-word {
+  font-weight: 600;
+  text-shadow:
+    0 -1px 0 #ffffff40,
+    0 1px 0 #c7d0b970,
+    1px 2px 0 #79856c,
+    2px 3px 0 #5b6853,
+    3px 4px 0 #3e4e3a,
+    4px 5px 0 #283a28,
+    5px 6px 0 #18291d,
+    0 15px 30px #03080788;
+}
+h1 .motion-word.title-accent {
+  text-shadow:
+    0 -1px 0 #f6ffdb55,
+    0 1px 0 #c7d69d,
+    1px 2px 0 #a2b27b,
+    2px 3px 0 #7e925c,
+    3px 4px 0 #5b7243,
+    4px 5px 0 #3c5433,
+    5px 6px 0 #243b29,
+    0 16px 30px #03080788;
+}
+.case-gallery video {
+  display: block;
+  width: 100%;
+  max-height: 70svh;
+  background: #0a100d;
+  border: 1px solid #dce79330;
+  border-radius: 3px;
+}
+.case-document {
+  margin-top: 24px;
+}
+.project--prototype .art-word {
+  font-size: clamp(23px, 3vw, 46px);
+  letter-spacing: 1px;
+  bottom: 60px;
+}
+@media (max-width: 600px) {
+  h1 .motion-word {
+    text-shadow:
+      0 1px 0 #c7d0b960,
+      1px 2px 0 #5b6853,
+      2px 3px 0 #283a28,
+      0 10px 20px #03080770;
+  }
+  h1 .motion-word.title-accent {
+    text-shadow:
+      0 1px 0 #c7d69d,
+      1px 2px 0 #7e925c,
+      2px 3px 0 #3c5433,
+      0 10px 20px #03080770;
+  }
+}

@@ -65,6 +65,113 @@
     }
   },
   {
+    "slug": "coastal-shrine",
+    "title": "Coastal Shrine",
+    "category": "Environment art / Lighting",
+    "status": "Selected",
+    "visible": true,
+    "cover": "/assets/coastal-shrine.webp",
+    "coverCaption": "Final scene from the supplied Environment Art project. External resources are credited in the technical document.",
+    "summary": "A coastal shrine at dusk, shaped through lighting, color grading and firefly effects.",
+    "role": "Scene composition · Lighting · Color grading · Decals · Firefly VFX",
+    "tools": "Unreal Engine · Photoshop",
+    "period": "Spring 2026",
+    "context": "RPI · Environment Art",
+    "link": "",
+    "document": "/documents/coastal-shrine-technical.pdf",
+    "sections": [
+      {
+        "title": "A shrine above the water",
+        "body": "The supplied technical document identifies Stone Dragon Shrine from Ghost of Tsushima as the visual reference. Blockout, a shrine focal point, warm lighting and the surrounding coast develop the final scene."
+      },
+      {
+        "title": "Light, surface and atmosphere",
+        "body": "The documented process includes Photoshop and LUT color grading, moss decals on a small torii gate, firefly VFX, and post-processing and lighting.\n\nA rain effect was considered and abandoned because consistently wet surfaces were difficult to achieve; it is not presented as part of the finished scene."
+      },
+      {
+        "title": "Individual work and external resources",
+        "body": "The technical document is credited to Kangcheng Yuan for Environment Art, Spring 2026. It explicitly lists external tree, stone-lantern, rope and grass resources. Scene composition and documented effects are presented here without claiming that every visible asset was modeled from scratch."
+      }
+    ],
+    "media": [
+      {
+        "id": "final-video",
+        "type": "video",
+        "url": "/assets/videos/coastal-shrine.mp4",
+        "poster": "/assets/coastal-shrine.webp",
+        "caption": "Uploaded final scene video, 2.4 seconds. Web copy is resized and silent."
+      },
+      {
+        "id": "focal-point",
+        "type": "image",
+        "url": "/assets/process/shrine-focal-point.webp",
+        "caption": "Shrine focal point — page 4 of the supplied technical document."
+      },
+      {
+        "id": "fireflies",
+        "type": "image",
+        "url": "/assets/process/shrine-fireflies.webp",
+        "caption": "Firefly VFX and the abandoned rain direction — page 8."
+      },
+      {
+        "id": "lighting",
+        "type": "image",
+        "url": "/assets/process/shrine-lighting.webp",
+        "caption": "Post-processing and lighting — page 9."
+      }
+    ],
+    "zh": {
+      "category": "场景美术 / 灯光",
+      "summary": "以灯光、调色与萤火虫特效，塑造暮色中的海岸神社。",
+      "role": "场景构图 · 灯光 · 调色 · 贴花 · 萤火虫特效",
+      "tools": "Unreal Engine · Photoshop",
+      "period": "2026 年春季",
+      "context": "RPI · 场景美术课程",
+      "coverCaption": "上传的场景作品终稿，外部资源来源详见技术文档。",
+      "sections": [
+        {
+          "title": "水面之上的神社",
+          "body": "技术文档将《对马岛之魂》的 Stone Dragon Shrine 列为视觉参考。通过白模、神社视觉焦点、暖色照明与海岸环境，逐步构建最终场景。"
+        },
+        {
+          "title": "光线、表面与氛围",
+          "body": "文档记录了 Photoshop 与 LUT 调色、小型鸟居的苔藓贴花、萤火虫特效，以及后处理与灯光。\n\n曾考虑加入雨效，但因难以统一湿润表面而放弃；这里不将它描述为已完成效果。"
+        },
+        {
+          "title": "个人制作与外部资源",
+          "body": "技术文档署名袁康成，属于 2026 年春季 Environment Art 课程。文档明确列出了外部树木、石灯笼、绳索与草地资源。这里展示场景整合和已记录的特效，不将所有可见资产归为个人原创建模。"
+        }
+      ],
+      "media": [
+        {
+          "id": "final-video",
+          "type": "video",
+          "url": "/assets/videos/coastal-shrine.mp4",
+          "poster": "/assets/coastal-shrine.webp",
+          "caption": "上传的场景终稿视频，约 2.4 秒；网页版本已压缩并去除音轨。"
+        },
+        {
+          "id": "focal-point",
+          "type": "image",
+          "url": "/assets/process/shrine-focal-point.webp",
+          "caption": "神社视觉焦点，来自技术文档第 4 页。"
+        },
+        {
+          "id": "fireflies",
+          "type": "image",
+          "url": "/assets/process/shrine-fireflies.webp",
+          "caption": "萤火虫特效与已放弃的雨效方向，来自第 8 页。"
+        },
+        {
+          "id": "lighting",
+          "type": "image",
+          "url": "/assets/process/shrine-lighting.webp",
+          "caption": "后处理与灯光，来自第 9 页。"
+        }
+      ]
+    }
+  },
+  {
     "slug": "wands-and-tomes",
     "title": "Wands and Tomes",
     "category": "Game design",
@@ -228,6 +335,81 @@
         }
       ],
       "media": []
+    }
+  },
+  {
+    "slug": "visual-studies",
+    "title": "Procedural Motion",
+    "category": "3D VFX / Motion studies",
+    "status": "Selected studies",
+    "visible": true,
+    "cover": "/assets/fracture-study.webp",
+    "coverCaption": "Still extracted from the uploaded Break_1.mp4.",
+    "summary": "Fracture and solver-driven movement: two short visual effects studies.",
+    "role": "Individual production breakdown to be added",
+    "tools": "Production notes pending",
+    "period": "",
+    "context": "Uploaded visual studies",
+    "link": "",
+    "sections": [
+      {
+        "title": "Fracture study",
+        "body": "A pear-shaped object breaks apart into fragments. This short render is presented directly from the supplied Break_1.mp4, rather than claiming an unverified simulation method."
+      },
+      {
+        "title": "Solver motion study",
+        "body": "The supplied solve4-karmarendersettings.mp4 shows a rotating arrangement of colorful curved forms around a central object.\n\nNode graphs, parameter choices, asset sources and an individual role breakdown can be added when supplied."
+      }
+    ],
+    "media": [
+      {
+        "id": "fracture",
+        "type": "video",
+        "url": "/assets/videos/fracture-study.mp4",
+        "poster": "/assets/fracture-study.webp",
+        "caption": "Fracture study — uploaded Break_1.mp4, 4.2 seconds. Silent web encode."
+      },
+      {
+        "id": "solver",
+        "type": "video",
+        "url": "/assets/videos/solver-study.mp4",
+        "poster": "/assets/solver-study.webp",
+        "caption": "Procedural motion — uploaded solve4-karmarendersettings.mp4, 8 seconds. Silent web encode."
+      }
+    ],
+    "zh": {
+      "category": "3D 特效 / 动态实验",
+      "coverCaption": "从上传的 Break_1.mp4 提取的画面。",
+      "summary": "破碎与求解器动态：两段短篇视觉特效实验。",
+      "role": "具体个人制作拆解待补充",
+      "tools": "制作说明待补充",
+      "context": "上传的视觉实验",
+      "sections": [
+        {
+          "title": "破碎实验",
+          "body": "梨形物体碎裂并散落为碎片。这里直接展示上传的 Break_1.mp4，不依据文件名推断未经确认的模拟方法。"
+        },
+        {
+          "title": "程序化动态实验",
+          "body": "上传的 solve4-karmarendersettings.mp4 展示了彩色弧形结构围绕中心物体旋转的动态。\n\n后续可补充节点图、参数设置、资产来源与个人职责拆解。"
+        }
+      ],
+      "media": [
+        {
+          "id": "fracture",
+          "type": "video",
+          "url": "/assets/videos/fracture-study.mp4",
+          "poster": "/assets/fracture-study.webp",
+          "caption": "破碎实验：来自 Break_1.mp4，约 4.2 秒，网页版本无音轨。"
+        },
+        {
+          "id": "solver",
+          "type": "video",
+          "url": "/assets/videos/solver-study.mp4",
+          "poster": "/assets/solver-study.webp",
+          "caption": "程序化动态：来自 solve4-karmarendersettings.mp4，约 8 秒，网页版本无音轨。"
+        }
+      ]
     }
   },
   {

@@ -1,0 +1,27 @@
+{
+  "source": "User upload.zip, 2026-10-12",
+  "files": [
+    {
+      "name": "solve4-karmarendersettings.mp4",
+      "bytes": 10850088,
+      "sha256": "f09306bf4472f7416a7bfb66e7e80c85c85a32b4abd921f8e652e92e0d420553"
+    },
+    {
+      "name": "Break_1.mp4",
+      "bytes": 6072741,
+      "sha256": "ba116b36431fc19dd5b5ca7f3bd297c87f2c86033ae9b073b3b4340c311de76f"
+    },
+    {
+      "name": "KangchengYuan_Technical_Document.pdf",
+      "bytes": 4011245,
+      "sha256": "935e442e5ead55af29e78d743747d915b71354e2a3f0ad576bc4febbf3739ba6"
+    },
+    {
+      "name": "FinalVideo.mp4",
+      "bytes": 8604172,
+      "sha256": "dc02b4456b72b065a7635bd5c540aee401dae9279e778fe116041922e7803780"
+    }
+  ],
+  "web_video_encoding": "H.264, CRF 23, faststart, no audio; landscape max 1280px, square 960px",
+  "reference": "User Endfield recording examined for interface motion; original SVG ring geometry implemented in code."
+}

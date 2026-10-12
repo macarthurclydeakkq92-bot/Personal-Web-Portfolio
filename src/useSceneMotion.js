@@ -172,7 +172,11 @@ export function useSceneMotion(language, enabled) {
           if (!heading) return;
           const sectionLines = heading.querySelectorAll(".motion-word");
           const titleTimeline = gsap.timeline({
-            scrollTrigger: { trigger: heading, start: "top 88%", once: true },
+            scrollTrigger: {
+              trigger: heading,
+              start: "top 88%",
+              toggleActions: "play none none none",
+            },
           });
           titleTimeline.fromTo(
             sectionLines,
@@ -218,7 +222,11 @@ export function useSceneMotion(language, enabled) {
               ? 0
               : i % Math.max(1, columns);
             const cardTimeline = gsap.timeline({
-              scrollTrigger: { trigger: card, start: "top 91%", once: true },
+              scrollTrigger: {
+                trigger: card,
+                start: "top 91%",
+                toggleActions: "play none none none",
+              },
             });
             revealCard(card, cardTimeline, 0.3 + staggerIndex * 0.22);
             const image = card.querySelector(".project-image");
@@ -241,7 +249,7 @@ export function useSceneMotion(language, enabled) {
               scrollTrigger: {
                 trigger: portrait,
                 start: "top 85%",
-                once: true,
+                toggleActions: "play none none none",
               },
             });
             revealCard(portrait, portraitTimeline, 0.35, 65);

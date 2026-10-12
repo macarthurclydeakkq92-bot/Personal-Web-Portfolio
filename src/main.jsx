@@ -7,6 +7,7 @@ import { useGlassTilt } from "./useGlassTilt.js";
 import MagicBento from "./MagicBento.jsx";
 import { useSceneMotion } from "./useSceneMotion.js";
 import { useMotionPreference } from "./useMotionPreference.js";
+import { useOrbitMotion } from "./useOrbitMotion.js";
 const magicEffects = {
   textAutoHide: true,
   enableStars: true,
@@ -209,6 +210,7 @@ function App() {
     }
   });
   useSceneMotion(lang, motion.enabled);
+  useOrbitMotion(motion.enabled);
   const [active, setActive] = useState(null);
   const [videoFailed, setVideoFailed] = useState(false);
   const t = copy[lang];
@@ -296,11 +298,32 @@ function App() {
         <section className="hero hud-hero" id="home">
           <div className="hud-grid" aria-hidden="true" />
           <div className="radar" aria-hidden="true">
-            <div className="radar-orbit orbit-outer" />
-            <div className="radar-orbit orbit-inner" />
+            <div className="radar-orbit orbit-outer">
+              <span className="orbit-rotor">
+                <svg viewBox="0 0 200 200" fill="none">
+                  <circle className="orbit-track" cx="100" cy="100" r="96" />
+                  <circle className="orbit-segments" cx="100" cy="100" r="93" />
+                  <circle className="orbit-point" cx="100" cy="7" r="2.2" />
+                </svg>
+              </span>
+            </div>
+            <div className="radar-orbit orbit-inner">
+              <span className="orbit-rotor">
+                <svg viewBox="0 0 200 200" fill="none">
+                  <circle className="orbit-track" cx="100" cy="100" r="96" />
+                  <circle className="orbit-segments" cx="100" cy="100" r="94" />
+                  <path
+                    className="orbit-bracket"
+                    d="M95 2h10M198 95v10M105 198H95M2 105V95"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div className="radar-ticks" />
             <div className="radar-landscape">
               <img src="/assets/conduit-01.webp" alt="" />
               <div className="radar-contours" />
+              <div className="radar-sweep" />
             </div>
             <span className="radar-cross cross-one">+</span>
             <span className="radar-cross cross-two">+</span>
@@ -374,34 +397,36 @@ function App() {
               <div className="panel-heading">
                 <span className="dot" />
                 {lang === "en" ? "PROJECT INDEX" : "项目索引"}
-                <span>01—05</span>
+                <span>01—{String(projects.length).padStart(2, "0")}</span>
               </div>
               <MagicBento
                 {...magicEffects}
                 disableAnimations={!motion.enabled}
                 className="index-cards"
               >
-                {[0, 1, 4].map((i) => (
-                  <button
-                    className="index-project"
-                    key={i}
-                    onClick={() => setActive(i)}
-                  >
-                    <span className="index-number">0{i + 1}</span>
-                    {projects[i].cover ? (
-                      <img src={projects[i].cover} alt="" />
-                    ) : (
-                      <span className="index-prototype">
-                        <Icon kind="approach" />
+                {["conduit", "coastal-shrine", "visual-studies"]
+                  .map((slug) => projects.findIndex((p) => p.slug === slug))
+                  .map((i) => (
+                    <button
+                      className="index-project"
+                      key={i}
+                      onClick={() => setActive(i)}
+                    >
+                      <span className="index-number">0{i + 1}</span>
+                      {projects[i].cover ? (
+                        <img src={projects[i].cover} alt="" />
+                      ) : (
+                        <span className="index-prototype">
+                          <Icon kind="approach" />
+                        </span>
+                      )}
+                      <span className="index-title">
+                        <strong>{projects[i].title}</strong>
+                        <small>{projects[i].category}</small>
                       </span>
-                    )}
-                    <span className="index-title">
-                      <strong>{projects[i].title}</strong>
-                      <small>{projects[i].category}</small>
-                    </span>
-                    <Icon />
-                  </button>
-                ))}
+                      <Icon />
+                    </button>
+                  ))}
               </MagicBento>
               <a className="index-all" href="#work">
                 {t.explore}
@@ -498,7 +523,7 @@ function App() {
           >
             {projects.map((p, i) => (
               <button
-                className={`project project-${i}`}
+                className={`project project-${i} ${p.slug === "afterlight" ? "project--prototype" : ""}`}
                 key={p.slug}
                 onClick={() => setActive(i)}
                 aria-label={`${lang === "en" ? "View" : "查看"} ${p.title}`}
@@ -521,7 +546,7 @@ function App() {
                   )}
                   <span className="project-number">
                     0{i + 1} /{" "}
-                    {i === 4
+                    {p.slug === "afterlight"
                       ? lang === "en"
                         ? "PAUSED PROTOTYPE"
                         : "已暂停的原型"
@@ -654,11 +679,36 @@ function App() {
               <div className="case-gallery">
                 {selected.media.map((m) => (
                   <figure key={m.id}>
-                    <img src={m.url} alt={m.caption} loading="lazy" />
+                    {m.type === "video" ? (
+                      <video
+                        controls
+                        playsInline
+                        preload="none"
+                        poster={m.poster}
+                        aria-label={m.caption}
+                      >
+                        <source src={m.url} type="video/mp4" />
+                      </video>
+                    ) : (
+                      <img src={m.url} alt={m.caption} loading="lazy" />
+                    )}
                     <figcaption>{m.caption}</figcaption>
                   </figure>
                 ))}
               </div>
+            )}
+            {selected.document && (
+              <a
+                className="text-link case-document"
+                href={selected.document}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {lang === "en"
+                  ? "Read technical document (PDF)"
+                  : "查看技术文档（PDF）"}
+                <Icon />
+              </a>
             )}
             {selected.link && (
               <a

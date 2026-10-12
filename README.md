@@ -36,3 +36,9 @@ Five public projects are integrated, with original English content and Simplifie
 Section titles enter through line masks before viewport-triggered card and image reveals. Cards move through outer `.scene-card-slot` frames while MagicBento keeps ownership of the actual interactive card transforms. Desktop images have a small smoothed parallax; mobile retains reveals without parallax. Effects play once per viewport entry and use transform/clip-path, without animating blur or layout dimensions. The header FX selector defaults to ON (the requested full motion), AUTO follows the system reduced-motion preference, and OFF shows static content. The choice is remembered locally. Language changes and media-query cleanup revert the GSAP context and its ScrollTriggers.
 
 Hover capabilities are detected with `any-hover` / `any-pointer` rather than viewport width or primary touch input. A desktop mouse remains supported in narrow windows and on hybrid devices; touch-only devices stay stable.
+
+## New media and orbit motion
+
+The uploaded environment-art final, technical PDF, fracture render and solver-motion render add Coastal Shrine and Procedural Motion, bringing the portfolio to seven projects. Original media hashes and web encoding notes are in `docs/new-media-manifest.json`. Three optimized silent videos total about 3.3 MB; they load only when explicitly played in a project dialog (`preload="none"`). The Coastal Shrine document credits external assets and documents the effects actually implemented.
+
+`src/useOrbitMotion.js` rotates nested SVG ring layers independently of the opening, with opposite directions, a slower tick ring and a scanning layer. It pauses outside the hero and in hidden tabs, and respects the shared FX setting. Title depth uses layered text shadows rather than an additional renderer. No new dependency was needed.
